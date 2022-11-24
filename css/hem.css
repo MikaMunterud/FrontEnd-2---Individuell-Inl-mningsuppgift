@@ -1,11 +1,10 @@
-main section {
+.homeSection {
   margin-top: 32px;
   position: relative;
   text-align: center;
-  overflow: scroll;
   z-index: 2;
 }
-main section .imgText {
+.homeSection .imgText {
   position: absolute;
   align-self: center;
   top: 40%;

@@ -9,8 +9,7 @@
   background-color: $beige-color-0-3;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  border-bottom: 5px double;
-
+  border-bottom: $borderFrame;
   &__headding {
     cursor: pointer;
     display: block;

@@ -25,10 +25,11 @@ main {
     }
 
     &__img {
-      width: 100%;
+      width: calc(100% - 10px);
+      border: $borderFrame;
       border-radius: 15px;
       @media (max-width: $media-XS) {
-        width: 50%;
+        width: calc(50% - 10px);
       }
     }
 

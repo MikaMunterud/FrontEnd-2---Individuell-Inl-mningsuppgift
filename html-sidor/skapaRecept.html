@@ -121,6 +121,7 @@
             >
               Ta bort beskrivning
             </button>
+            <span class="removeItem__msg"></span>
           </div>
           <label class="createRecipe__form__label" for="img1"
             >Lägg till bilder</label
@@ -299,26 +300,38 @@
       const year = new Date().getFullYear();
       $(".copyright").append(` ${year} Hemmaköket AB`);
 
-      //this makes it possible
+      //this links the added span message with the actual file input message
       $(".imgInput__section__fileInput").change(function () {
         const input = $(this);
         const inputSection = input.parent();
         const inputMsg = $(".imgInput__section__fileInput__msg", inputSection);
         const fileName = input.val()?.replace(/^[A-z]:\\.*\\/, "");
-        console.log(fileName);
 
         inputMsg.text(fileName);
       });
 
-      // $(document).ready(function () {
-      //   $(".createRecipe__form__label").click(function () {});
-      //   const chosenFile = $(".imgInput__section__fileInput").val();
-      //   $(".imgInput__section__fileInput__msg").text(
-      //     ".imgInput__section__fileInput".val()
-      //   );
+      $("#addItem").click(function () {
+        const descriptionBox = $(this).parent().prev().children().last();
+        const descriptionList = $(this).parent().prev();
+        const addDescription = descriptionBox.clone();
 
-      //   $(this).siblings(".imgInput__section__fileInput").toggle();
-      // });
+        descriptionList.append(addDescription);
+      });
+      $("#removeItem").click(function () {
+        const descriptionList = $(this).parent().prev().children();
+        const descriptionBox = $(this).parent().prev().children().last();
+
+        if (descriptionList.length > 1) {
+          descriptionBox.remove();
+        } else {
+          $(".removeItem__msg").fadeIn();
+          $(".removeItem__msg").text("Du måste ha minst 1 beskrivning");
+          setTimeout(function () {
+            $(".removeItem__msg").fadeOut();
+            $(".removeItem__msg").text("");
+          }, 3000);
+        }
+      });
 
       $(".btnCreateRecipe__msg").hide();
 
@@ -334,31 +347,6 @@
           form.trigger("reset");
         }, 5000);
       });
-
-      // const formMessage = $(".frameForm__contactForm__message");
-      // formMessage.hide();
-
-      // $(".frameForm__contactForm__formInput").submit(function (event) {
-      //   event.preventDefault();
-      //   const inputName = $("#name").val();
-      //   const inputEmail = $("#email").val();
-      //   const inputMessage = $("#message").val();
-      //   const formLabels = $(".frameForm__contactForm__labels");
-      //   const formInputs = $(".frameForm__contactForm__formInput");
-
-      //   formLabels.fadeOut("slow").hide();
-      //   $(this).fadeOut("slow").hide();
-
-      //   formMessage.fadeIn().show();
-      //   setTimeout(function () {
-      //     formMessage.fadeOut().hide();
-      //     formLabels.fadeIn("slow");
-      //     formInputs.fadeIn("slow");
-      //     $("#name").val("");
-      //     $("#email").val("");
-      //     $("#message").val("");
-      //   }, 6000);
-      // });
     </script>
   </body>
 </html>

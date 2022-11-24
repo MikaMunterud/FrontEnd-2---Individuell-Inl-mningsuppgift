@@ -6,7 +6,7 @@
   background-color: rgba(148, 132, 112, 0.3);
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  border-bottom: 5px double;
+  border-bottom: 5px double #896723;
 }
 .filterBar__headding {
   cursor: pointer;

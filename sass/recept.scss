@@ -18,6 +18,7 @@
     width: 100%;
     margin-bottom: 32px;
     padding: 24px 32px 32px;
+    border: $borderFrame;
     border-radius: 25px;
     background-color: $beige-color-0-3;
     @media (max-width: $media-M) {
@@ -80,6 +81,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        
         width: 100%;
         margin: 16px 0px;
         gap: 16px;
@@ -87,6 +89,7 @@
 
         & img {
           width: calc((100% / 4) - 16px);
+          
           border-radius: 10px;
           cursor: pointer;
 
@@ -104,7 +107,7 @@
         & .wide-img {
           width: 100%;
           border-radius: 15px;
-
+          border: $borderFrame;
           display: none;
           object-fit: cover;
         }
