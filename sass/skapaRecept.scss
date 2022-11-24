@@ -126,6 +126,7 @@
       &__fileInput {
         display: none;
         &__label {
+          width: fit-content;
           background-color: $light-color;
           padding: 6px 16px;
           font-size: 0.9rem;
@@ -143,6 +144,7 @@
           }
         }
         &__msg {
+          width: fit-content;
           font-size: 0.8rem;
           margin-right: 32px;
         }
