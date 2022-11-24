@@ -299,7 +299,7 @@
       const year = new Date().getFullYear();
       $(".copyright").append(` ${year} Hemmaköket AB`);
 
-      //this makes it possible 
+      //this makes it possible
       $(".imgInput__section__fileInput").change(function () {
         const input = $(this);
         const inputSection = input.parent();
@@ -322,19 +322,17 @@
 
       $(".btnCreateRecipe__msg").hide();
 
-      $(".createRecipe__form").submit(function () {
+      $(".createRecipe__form").submit(function (event) {
+        event.preventDefault();
+        const form = $(this);
         $(".btnCreateRecipe").fadeOut().hide();
-
         $(".btnCreateRecipe__msg").fadeIn().show();
 
         setTimeout(function () {
           $(".btnCreateRecipe__msg").fadeOut("slow").hide();
-          $(".btnCreateRecipe").fadeIn().hide();
-          $("#recepieName").val("");
-          $("#date").val("");
-          $("#shortDescription").val("");
-          $(".formTextBox").val("");
-        }, 6000);
+          $(".btnCreateRecipe").fadeIn().show();
+          form.trigger("reset");
+        }, 5000);
       });
 
       // const formMessage = $(".frameForm__contactForm__message");

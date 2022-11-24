@@ -205,6 +205,7 @@
               type="text"
               class="frameForm__contactForm__formInput__box"
               id="name"
+              minlength="2"
               required
             />
 
@@ -250,18 +251,16 @@
         const inputMessage = $("#message").val();
         const formLabels = $(".frameForm__contactForm__labels");
         const formInputs = $(".frameForm__contactForm__formInput");
-
+        const form = $(this);
           formLabels.fadeOut("slow").hide();
-          $(this).fadeOut("slow").hide();
+          form.fadeOut("slow").hide();
 
           formMessage.fadeIn().show();
           setTimeout(function () {
             formMessage.fadeOut().hide();
             formLabels.fadeIn("slow");
             formInputs.fadeIn("slow");
-            $("#name").val("");
-            $("#email").val("");
-            $("#message").val("");
+            form.trigger("reset");
           }, 6000);
         
       });
