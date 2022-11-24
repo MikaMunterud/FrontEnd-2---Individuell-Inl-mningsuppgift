@@ -8,7 +8,7 @@ main section {
 main section .imgText {
   position: absolute;
   align-self: center;
-  top: 10%;
+  top: 40%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.8rem;

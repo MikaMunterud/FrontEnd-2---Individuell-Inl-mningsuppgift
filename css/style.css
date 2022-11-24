@@ -25,6 +25,7 @@ h1 {
   font-size: 3rem;
   text-align: center;
   justify-content: space-around;
+  background-image: url("../img/marmor3.webp");
 }
 
 h2 {
@@ -86,7 +87,6 @@ p {
   font-size: 1.6rem;
   text-decoration: none;
   font-weight: bold;
-  cursor: pointer;
 }
 @media (max-width: 700px) {
   .navBar__opt__list__link {
