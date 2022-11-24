@@ -1,0 +1,40 @@
+@import "variables";
+
+main {
+  & section {
+    margin-top: 32px;
+    position: relative;
+    text-align: center;
+    overflow: scroll;
+    z-index: 2;
+
+    & .imgText {
+      position: absolute;
+      align-self: center;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      // top: 40%;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
+      font-size: 1.8rem;
+      // @media (min-width: 800px) {
+      //   font-size: 2rem;
+      //   transform: translate(-40%, -50%);
+      // }
+
+      // @media (min-width: 950px) {
+      //   font-size: 2.2rem;
+      //   transform: translate(-35%, -35%);
+      // }
+      // @media (min-width: 1300px) {
+      //   font-size: 2.5rem;
+      //   transform: translate(-35%, -25%);
+      // }
+      // @media (min-width: 1600px) {
+      //   font-size: 3rem;
+      //   transform: translate(-40%, -30%);
+      // }
+    }
+  }
+}

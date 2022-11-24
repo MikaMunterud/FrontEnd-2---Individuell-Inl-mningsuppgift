@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="sv" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="På denna sida kan man skapa nya recept."
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/recept.css" />
+    <title>Om oss</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="companyName">
+      <h1>Mikas & Davids hemmakök</h1>
+    </header>
+    <nav class="navBar" id="descriptionFullView">
+      <ul class="navBar__opt">
+        <li class="navBar__opt__list">
+          <a class="navBar__opt__list__link" href="../index.html">Hem</a>
+        </li>
+        <li class="navBar__opt__list active">
+          <a
+            class="navBar__opt__list__link"
+            href="../html-sidor/allaRecept.html"
+            >Alla recept</a
+          >
+        </li>
+        <li class="navBar__opt__list">
+          <a
+            class="navBar__opt__list__link"
+            href="../html-sidor/skapaRecept.html"
+            >Skapa recept</a
+          >
+        </li>
+        <li class="navBar__opt__list">
+          <a class="navBar__opt__list__link" href="../html-sidor/om-oss.html"
+            >Om oss</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Gong Bao Ji Ding</h2>
+      <section class="recepie">
+        <div class="recepie__frame overview">
+          <div class="overview__1stLine">
+            <h3 class="overview__1stline_headding">Kort beskrivning</h3>
+            <div class="overview__1stline_date">2022-10-25</div>
+          </div>
+          <p>
+            Gong Bao Ji Ding är en populär kinesisk rätt som kommer från Sichuan
+            provinsen. I västvärlden är denna rätt mer känd som kungpao
+            kyckling. Men detta recept är mer Sichuan autentisk.
+          </p>
+          <a class="overview__showMore fullView" href="#descriptionFullView"
+            >Visa recept ☞</a
+          >
+          <a class="overview__showMore smallView" href="#descriptionSmallView"
+            >Visa recept ☟</a
+          >
+          <div class="overview__categories">
+            <span>Kyckling</span>
+            <span>|</span>
+            <span>Huvudrätter</span>
+            <span>|</span>
+            <span>Grytor</span>
+            <span>|</span>
+            <span>Asiatisk mat</span>
+          </div>
+          <div class="overview__imgBoxSmall">
+            <img
+              id="img1"
+              src="../img/chili-chicken1.jpeg"
+              alt="Första bilden på receptet"
+            />
+            <img
+              id="img2"
+              src="../img/chili-chicken2.jpeg"
+              alt="Andra bilden på receptet"
+            />
+            <img
+              id="img3"
+              src="../img/chili-chicken3.jpeg"
+              alt="Tredje bilden på receptet"
+            />
+            <img
+              id="img4"
+              src="../img/chili-chicken4.jpeg"
+              alt="Fjärde bilden på receptet"
+            />
+          </div>
+          <div class="overview__imgBoxWide">
+            <img
+              class="wide-img"
+              id="wide-img1"
+              src="../img/chili-chicken1.jpeg"
+              alt="Fjärde bilden på receptet"
+            />
+            <img
+              class="wide-img"
+              id="wide-img2"
+              src="../img/chili-chicken2.jpeg"
+              alt="Fjärde bilden på receptet"
+            />
+            <img
+              class="wide-img"
+              id="wide-img3"
+              src="../img/chili-chicken3.jpeg"
+              alt="Fjärde bilden på receptet"
+            />
+            <img
+              class="wide-img"
+              id="wide-img4"
+              src="../img/chili-chicken4.jpeg"
+              alt="Fjärde bilden på receptet"
+            />
+          </div>
+          <div id="descriptionSmallView"></div>
+        </div>
+        <div class="recepie__frame fullRecipe">
+          <div class="fullRecipe__nav">
+            <h3 class="fullRecipe__nav__heading ingredients">Ingredienser</h3>
+            <h3 class="fullRecipe__nav__heading description">Beskrivning</h3>
+          </div>
+          <div class="fullRecipe__ingredients">
+            <p>cirka 5-6 portioner</p>
+            <ul class="fullRecipe__ingredients__list">
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">1</span>
+                  <span class="m-ment">kg</span>
+                </div>
+                <div class="ingredient">Kyckling</div>
+              </li>
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">0.5</span>
+                  <span class="m-ment">dl</span>
+                </div>
+                <div class="ingredient">Vegetabiliskolja</div>
+              </li>
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">40</span>
+                  <span class="m-ment">g</span>
+                </div>
+                <div class="ingredient">Torkad chili</div>
+              </li>
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">1</span>
+                  <span class="m-ment">msk</span>
+                </div>
+                <div class="ingredient">Sichuanpeppar</div>
+              </li>
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">8</span>
+                  <span class="m-ment">st</span>
+                </div>
+                <div class="ingredient">Vitlöksklyftor</div>
+              </li>
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">3</span>
+                  <span class="m-ment">msk</span>
+                </div>
+                <div class="ingredient">Ingefära</div>
+              </li>
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">10</span>
+                  <span class="m-ment">st</span>
+                </div>
+                <div class="ingredient">Salladslök/ vårlök</div>
+              </li>
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">3.5</span>
+                  <span class="m-ment">dl</span>
+                </div>
+                <div class="ingredient">Osaltade rostade jordnötter</div>
+              </li>
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">2</span>
+                  <span class="m-ment">msk</span>
+                </div>
+                <div class="ingredient">Majsmjöl</div>
+              </li>
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">1.5</span>
+                  <span class="m-ment">dl</span>
+                </div>
+                <div class="ingredient">Vatten</div>
+              </li>
+            </ul>
+            <h4 class="fullRecipe__ingredients__subHeading">Kycklingmarinad</h4>
+            <ul class="fullRecipe__ingredients__list">
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">2</span>
+                  <span class="m-ment">msk</span>
+                </div>
+                <div class="ingredient">Sojasås (kinesisk)</div>
+              </li>
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">2</span>
+                  <span class="m-ment">msk</span>
+                </div>
+                <div class="ingredient">Rödvin</div>
+              </li>
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">2</span>
+                  <span class="m-ment">msk</span>
+                </div>
+                <div class="ingredient">Majsmjöl</div>
+              </li>
+            </ul>
+            <h4 class="fullRecipe__ingredients__subHeading">Gong Bao sås</h4>
+            <ul class="fullRecipe__ingredients__list">
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">0.5</span>
+                  <span class="m-ment">dl</span>
+                </div>
+                <div class="ingredient">Honung</div>
+              </li>
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">0.5</span>
+                  <span class="m-ment">dl</span>
+                </div>
+                <div class="ingredient">Balsamvinäger</div>
+              </li>
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">1</span>
+                  <span class="m-ment">msk</span>
+                </div>
+                <div class="ingredient">Sesamolja</div>
+              </li>
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="amount">
+                  <span class="qty">2</span>
+                  <span class="m-ment">msk</span>
+                </div>
+                <div class="ingredient">Sojasås (kinesisk)</div>
+              </li>
+            </ul>
+            <h4 class="fullRecipe__ingredients__subHeading">
+              Rekomenderat tillbehör
+            </h4>
+            <ul class="fullRecipe__ingredients__list">
+              <li class="fullRecipe__ingredients__list__item">
+                <div class="ingredient">Svart ris eller svenskt matvete</div>
+              </li>
+            </ul>
+          </div>
+          <div class="fullRecipe__description">
+            <ol class="fullRecipe__description__list">
+              <li class="fullRecipe__description__list__item">
+                Tillaga valfritt tillbehör enligt förpackningens anvisningar
+                (matvete behövs inte tillagas förens efter steg 7).
+              </li>
+              <li class="fullRecipe__description__list__item">
+                Skär kycklingen i 1,5 cm bitar och lägg i en bunke med
+                kycklingmarinad.
+              </li>
+              <li class="fullRecipe__description__list__item">
+                Ta bort fröna från chilin och hacka 1 cm bitar.
+              </li>
+              <li class="fullRecipe__description__list__item">
+                Hacka vårlöken till ca 1 cm bitar.
+              </li>
+              <li class="fullRecipe__description__list__item">
+                Blanda Gong Bao såsen i en skål.
+              </li>
+              <li class="fullRecipe__description__list__item">
+                Riv ingefära och finhacka vitlök.
+              </li>
+              <li class="fullRecipe__description__list__item">
+                Blanda vatten och majsmjöl i en skål och ställ åt sidan.
+              </li>
+              <li class="fullRecipe__description__list__item">
+                Värm en wok på hög temperatur och tillsätt olja, chili och
+                sichauanpeppar några sekunder för att framhäva aromerna.
+              </li>
+              <li class="fullRecipe__description__list__item">
+                Tillsätt kycklingen och rör om i någon minut tills kycklingen
+                har separerats och fått stekt yta.
+              </li>
+              <li class="fullRecipe__description__list__item">
+                Blanda i vitlök, ingefära och vårlök och fortsätt röra om till
+                kycklingen är nästan klar.
+              </li>
+              <li class="fullRecipe__description__list__item">
+                Rör i Gong Bao såsen och majsmjöl-vattnet.
+              </li>
+              <li class="fullRecipe__description__list__item">
+                När såsen har tjocknat och kycklingen är klar, tillsätt
+                jordnötterna och servera direkt.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="footerNav">
+        <div class="footerNav__section">
+          <h4>Matinspiration</h4>
+          <a href="../index.html/foodRecipies">Matrecept</a>
+          <a href="../index.html/bakingRecipies">Bakrecept</a>
+          <a href="../index.html/drinks">Dryck & drinkar</a>
+          <a href="allaRecept.html">Alla våra recept</a>
+          <a href="../index.html/tips">Tips & nyheter</a>
+        </div>
+        <div class="footerNav__section">
+          <h4>Dela ditt recept med oss</h4>
+          <a href="skapaRecept.html">Skapa recept</a>
+          <a href="mailto: info@hemmakoket.se">Mejla recept</a>
+        </div>
+        <div class="footerNav__section">
+          <h4>Följ oss på sociala medier</h4>
+          <a href="../index.html/facebookSida" target="_blank">Facebook</a>
+          <a href="../index.html/instagramSida" target="_blank">Instagram</a>
+        </div>
+        <div class="footerNav__section">
+          <h4>Kontaktinformation</h4>
+          <a href="om-oss.html#aboutUs">Om Hemmaköket</a>
+          <a href="om-oss.html#aboutUsFooter">Kontaktformulär</a>
+          <a href="mailto: info@hemmakoket.se">Mejla oss</a>
+          <a href="tel:086732520">Ring oss</a>
+        </div>
+      </section>
+      <div class="copyright">© Copyright</div>
+    </footer>
+    <script>
+      const year = new Date().getFullYear();
+      $(".copyright").append(` ${year} Hemmaköket AB`);
+
+      $("#wide-img1").show();
+
+      $("#img1").click(function () {
+        $(".wide-img").hide();
+        $("#wide-img1").show();
+      });
+
+      $("#img2").click(function () {
+        $(".wide-img").hide();
+        $("#wide-img2").show();
+      });
+
+      $("#img3").click(function () {
+        $(".wide-img").hide();
+        $("#wide-img3").show();
+      });
+
+      $("#img4").click(function () {
+        $(".wide-img").hide();
+        $("#wide-img4").show();
+      });
+
+      $(document).ready(function () {
+        const recipeFullRecipe = $(".recepie__frame.fullRecipe");
+        const showMoreFullView = $(".overview__showMore.fullView");
+        const showMoreSmallView = $(".overview__showMore.smallView");
+        const recepeIngredientsList = $(".fullRecipe__ingredients");
+        const recipeDescriptionList = $(".fullRecipe__description");
+        const recipeIngredientsBtn = $(".fullRecipe__nav__heading.ingredients");
+        const recipeDescriptionBtn = $(".fullRecipe__nav__heading.description");
+
+        recipeFullRecipe.hide();
+        recipeDescriptionList.hide();
+
+        showMoreFullView.click(function () {
+          if (showMoreFullView.text() === "Visa recept ☞") {
+            showMoreFullView.text("Dölj recept ☜");
+            recipeFullRecipe.show();
+          } else {
+            showMoreFullView.text("Visa recept ☞");
+            recipeFullRecipe.hide();
+          }
+        });
+        showMoreSmallView.click(function () {
+          recipeFullRecipe.show();
+        });
+
+        recipeIngredientsBtn.click(function () {
+          recipeDescriptionList.hide();
+          recepeIngredientsList.show();
+        });
+        recipeDescriptionBtn.click(function () {
+          recipeDescriptionList.show();
+          recepeIngredientsList.hide();
+        });
+      });
+    </script>
+  </body>
+</html>

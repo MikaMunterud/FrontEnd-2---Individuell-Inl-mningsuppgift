@@ -1,0 +1,159 @@
+.recepie {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 32px;
+  margin-top: 16px;
+}
+@media (max-width: 1000px) {
+  .recepie {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+.recepie__frame {
+  display: flex;
+  flex-direction: column;
+  max-height: min-content;
+  width: 100%;
+  margin-bottom: 32px;
+  padding: 24px 32px 32px;
+  border-radius: 25px;
+  background-color: rgba(148, 132, 112, 0.3);
+}
+@media (max-width: 1000px) {
+  .recepie__frame {
+    width: calc(100% - 64px);
+  }
+}
+.recepie__frame h3 {
+  margin: 0px;
+  margin-bottom: 12px;
+}
+.recepie__frame .overview__1stLine {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.recepie__frame .overview__1stLine__headding {
+  margin: 0px;
+}
+.recepie__frame .overview__1stLine__date {
+  font-size: 1rem;
+}
+.recepie__frame .overview__showMore {
+  width: fit-content;
+  padding: 12px 0px;
+  color: inherit;
+  font-size: 1.4rem;
+  align-self: flex-end;
+  text-decoration: none;
+  cursor: pointer;
+}
+.recepie__frame .overview__showMore:hover {
+  opacity: 0.7;
+}
+.recepie__frame .overview__showMore.fullView {
+  display: flex;
+}
+@media (max-width: 1000px) {
+  .recepie__frame .overview__showMore.fullView {
+    display: none;
+  }
+}
+.recepie__frame .overview__showMore.smallView {
+  display: none;
+}
+@media (max-width: 1000px) {
+  .recepie__frame .overview__showMore.smallView {
+    display: flex;
+    margin: 0px;
+  }
+}
+.recepie__frame .overview__categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.recepie__frame .overview__imgBoxSmall {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 16px 0px;
+  gap: 16px;
+  text-align: center;
+}
+.recepie__frame .overview__imgBoxSmall img {
+  width: calc(25% - 16px);
+  border-radius: 10px;
+  cursor: pointer;
+  object-fit: cover;
+}
+.recepie__frame .overview__imgBoxSmall img:hover {
+  scale: 1.15;
+  opacity: 0.7;
+}
+.recepie__frame .overview__imgBoxWide {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+.recepie__frame .overview__imgBoxWide .wide-img {
+  width: 100%;
+  border-radius: 15px;
+  display: none;
+  object-fit: cover;
+}
+.recepie__frame .fullRecipe__nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 32px;
+}
+.recepie__frame .fullRecipe__nav__heading {
+  cursor: pointer;
+}
+.recepie__frame .fullRecipe__nav__heading:hover {
+  opacity: 0.7;
+}
+.recepie__frame .fullRecipe__ingredients {
+  margin-left: 8px;
+}
+.recepie__frame .fullRecipe__ingredients__list {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0px 0px;
+  padding-left: 18px;
+  gap: 4px;
+  list-style-type: none;
+}
+.recepie__frame .fullRecipe__ingredients__list__item {
+  display: flex;
+  flex-direction: row;
+}
+.recepie__frame .fullRecipe__ingredients__list__item .amount {
+  width: 70px;
+  gap: 8px;
+}
+.recepie__frame .fullRecipe__ingredients__subHeading {
+  margin-top: 16px;
+}
+.recepie__frame .fullRecipe__description {
+  margin-left: 8px;
+}
+.recepie__frame .fullRecipe__description__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding-left: 18px;
+  gap: 8px;
+}
+.recepie__frame .fullRecipe__description__list__item {
+  padding: 0px 32px 0px 12px;
+  text-align: justify;
+}
+
+/*# sourceMappingURL=recept.css.map */

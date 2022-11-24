@@ -1,0 +1,161 @@
+@import "variables";
+
+main {
+  padding-bottom: 32px;
+}
+
+.fullTeam {
+  display: flex;
+  flex-direction: row;
+  margin-top: 32px;
+  justify-content: space-between;
+  gap: 32px;
+  @media (max-width: $media-XS) {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__team {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @media (max-width: $media-XS) {
+      flex-direction: row;
+      width: fit-content;
+    }
+
+    &__img {
+      width: 100%;
+      border-radius: 15px;
+      @media (max-width: $media-XS) {
+        width: 50%;
+      }
+    }
+
+    &__info {
+      padding: 26px 16px 0px 16px;
+      @media (max-width: $media-XS) {
+        padding-left: 32px;
+        padding-right: 0px;
+      }
+
+      &__title {
+        margin-top: 0px;
+        text-align: center;
+      }
+    }
+
+    .contactButton {
+      width: fit-content;
+      margin: 16px 0px 4px 0;
+      padding: 0px;
+      background-color: inherit;
+      color: inherit;
+      border: 0;
+      font-family: inherit;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .contactInfo {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-left: 6px;
+
+      & a {
+        width: fit-content;
+        margin: 2px 0;
+        color: inherit;
+        text-decoration: none;
+        text-align: start;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.frameForm {
+  display: flex;
+  width: 50%;
+  max-width: 600px;
+  height: 250px;
+  padding: 16px;
+  justify-content: center;
+  border: 5px double;
+  border-radius: 25px;
+  align-items: center;
+  @media (max-width: $media-S) {
+    width: 60%;
+  }
+  @media (max-width: $media-XS) {
+    width: 70%;
+  }
+
+  &__contactForm {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-weight: bold;
+
+    &__labels {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      margin-top: 2px;
+      margin-right: 20px;
+      font-weight: bold;
+      align-items: flex-start;
+      gap: 22px;
+    }
+
+    &__message {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      gap: 4px;
+    }
+    &__formInput {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 16px;
+
+      &__box {
+        width: calc(100% - 16px);
+        border: 0;
+        outline: 0px;
+        border-radius: 6px;
+        padding: 6px 8px;
+        font-weight: normal;
+        font-size: 0.9rem;
+        color: $gold-color;
+        resize: none;
+      }
+      &__btn {
+        display: flex;
+        padding: 8px 16px;
+        background-color: $light-color;
+        color: inherit;
+        font-family: inherit;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: 2px inset $gold-color;
+        border-radius: 8px;
+        cursor: pointer;
+        align-self: flex-end;
+        &:hover {
+          opacity: 0.8;
+          box-shadow: 0 0 0 2px;
+          transition: 0.5s;
+        }
+        &:active {
+          transform: translate(0px, 1px);
+        }
+      }
+    }
+  }
+}

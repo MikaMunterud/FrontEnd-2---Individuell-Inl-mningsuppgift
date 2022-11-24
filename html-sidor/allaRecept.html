@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="På denna sida kan man skapa nya recept."
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/allaRecept.css" />
+    <title>Om oss</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="companyName">
+      <h1>Mikas & Davids hemmakök</h1>
+    </header>
+    <nav class="navBar">
+      <ul class="navBar__opt">
+        <li class="navBar__opt__list">
+          <a class="navBar__opt__list__link" href="../index.html">Hem</a>
+        </li>
+        <li class="navBar__opt__list active">
+          <a
+            class="navBar__opt__list__link"
+            href="../html-sidor/allaRecept.html"
+            >Alla recept</a
+          >
+        </li>
+        <li class="navBar__opt__list">
+          <a
+            class="navBar__opt__list__link"
+            href="../html-sidor/skapaRecept.html"
+            >Skapa recept</a
+          >
+        </li>
+        <li class="navBar__opt__list">
+          <a class="navBar__opt__list__link" href="../html-sidor/om-oss.html"
+            >Om oss</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <section class="filterBar">
+      <h2 class="filterBar__headding">Visa filter</h2>
+      <form method="post" class="filterBar__filters">
+        <div class="filterBar__filters__list">
+          <label for="ingredients">Ingrediens</label>
+          <select id="ingredients">
+            <option value="fish">Fisk</option>
+            <option value="pork">Fläsk</option>
+            <option value="chicken">Kyckling</option>
+            <option value="beef">Nöt</option>
+            <option value="seafood">Skaldjur</option>
+            <option value="vegetarian">Vegetarisk</option>
+            <option value="wildMeat">Vilt</option>
+          </select>
+        </div>
+        <div class="filterBar__filters__list">
+          <label for="typeOfMeal">Måltid</label>
+          <select id="typeOfMeal">
+            <option value="starter">Förrätt</option>
+            <option value="main">Huvudrätter</option>
+            <option value="dessert">Efterrätter</option>
+            <option value="breakfast">Frukost</option>
+            <option value="brunch">Brunch</option>
+            <option value="snack">Snacks</option>
+            <option value="baking">Bakverk</option>
+            <option value="tapas">Smårätter/tapas</option>
+            <option value="sides">Tillbehör</option>
+            <option value="drink">Drink</option>
+          </select>
+        </div>
+        <div class="filterBar__filters__list">
+          <label for="typAvRatt">Typ av rätt</label>
+          <select id="typAvRatt">
+            <option value="förrätter">Pannkaka</option>
+            <option value="huvudrätter">Paj</option>
+            <option value="efterrätter">Burgare</option>
+            <option value="frukost">Såser/röror</option>
+            <option value="tilltugg/snacks/snittar">Sallad</option>
+            <option value="bröd">Lasagne</option>
+            <option value="brunch">Gratänger</option>
+            <option value="bakverk">Grytor</option>
+            <option value="smårätter/tapas">Soppa</option>
+            <option value="tillbehör">Biffar</option>
+            <option value="buffémat">Pizza</option>
+            <option value="godis">Långkok</option>
+            <option value="vardagsmiddag">Mackor/wraps</option>
+            <option value="picknick">Våfflor</option>
+            <option value="lunch">Omelett</option>
+          </select>
+        </div>
+        <div class="filterBar__filters__list">
+          <label for="varldensKok">Världens kök</label>
+          <select id="varldensKok">
+            <option value="asiatisk">Asiatisk mat</option>
+            <option value="italiensk">Italiensk mat</option>
+            <option value="svensk">Svensk/nordisk mat</option>
+            <option value="thailandsk">Thailändsk mat</option>
+            <option value="amerikansk">Amerikansk mat</option>
+            <option value="indisk">Indisk mat</option>
+            <option value="mexikansk">Mexikansk mat</option>
+            <option value="grekisk">Grekisk mat</option>
+            <option value="mellanostern">Mat från Mellanöstern</option>
+          </select>
+        </div>
+        <button type="button">Välj filter</button>
+      </form>
+    </section>
+
+    <main>
+      <section>
+        <div class="recipeList">
+          <div class="recipeList__recipe">
+            <div class="imgBox">
+              <img
+                class="imgBox__img"
+                src="../img/chili-chicken1.jpeg"
+                alt="Första bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/chili-chicken2.jpeg"
+                alt="Andra bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/chili-chicken3.jpeg"
+                alt="Tredje bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/chili-chicken4.jpeg"
+                alt="Fjärde bilden på receptet"
+              />
+            </div>
+
+            <div class="receptbeskrivning">
+              <h3>Gong Bao Ji Ding</h3>
+              <p>2022-10-25</p>
+              <div class="kategorier">
+                <span>Kyckling</span>
+                <span>|</span>
+                <span>Huvudrätter</span>
+                <span>|</span>
+                <span>Grytor</span>
+                <span>|</span>
+                <span>Asiatisk mat</span>
+              </div>
+              <input type="button" class="btnMoreInfo" value="Mer info" />
+              <div class="shortInfo">
+                <p>
+                  Gong Bao Ji Ding är en populär kinesisk rätt som kommer från
+                  Sichuan provinsen. I västvärlden är denna rätt mer känd som
+                  kungpao kyckling. Men detta recept är mer Sichuan autentisk.
+                </p>
+              </div>
+              <p>
+                <a href="../html-recept/recept1.html">Gå till receptet</a>
+              </p>
+            </div>
+          </div>
+          <div class="recipeList__recipe">
+            <div class="imgBox">
+              <img
+                class="imgBox__img"
+                src="../img/veggie-pie1.jpeg"
+                alt="Första bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/veggie-pie2.jpeg"
+                alt="Andra bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/veggie-pie3.jpeg"
+                alt="Tredje bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/veggie-pie4.jpeg"
+                alt="Fjärde bilden på receptet"
+              />
+            </div>
+            <div class="receptbeskrivning">
+              <h3>Grekisk paj</h3>
+              <p>2022-10-25</p>
+              <div class="kategorier">
+                <span>Vegetarisk</span>
+                <span>|</span>
+                <span>Huvudrätter</span>
+                <span>|</span>
+                <span>Paj</span>
+                <span>|</span>
+                <span>Grekisk mat</span>
+              </div>
+              <input type="button" class="btnMoreInfo" value="Mer info" />
+              <div class="shortInfo">
+                <p>
+                  Denna vegetariska grekiska paj är perfekt både till den enkla
+                  vardagen eller som tillbehör på buffébordet! Den är enkel att
+                  göra men otroligt smakrik. Blir extra god med tsatziki till.
+                </p>
+              </div>
+              <p>
+                <a href="../html-recept/recept1.html">Gå till receptet</a>
+              </p>
+            </div>
+          </div>
+          <div class="recipeList__recipe">
+            <div class="imgBox">
+              <img
+                class="imgBox__img"
+                src="../img/potatosallad1.jpeg"
+                alt="Första bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/potatosallad2.jpeg"
+                alt="Andra bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/potatosallad3.jpeg"
+                alt="Tredje bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/potatosallad4.jpeg"
+                alt="Fjärde bilden på receptet"
+              />
+            </div>
+            <div class="receptbeskrivning">
+              <h3>Fransk potatissallad</h3>
+              <p>2022-10-25</p>
+              <div class="kategorier">
+                <span>Vegetarisk</span>
+                <span>|</span>
+                <span>Tillbehör</span>
+                <span>|</span>
+                <span>Sallad</span>
+                <span>|</span>
+                <span>Fransk mat</span>
+              </div>
+              <input type="button" class="btnMoreInfo" value="Mer info" />
+              <div class="shortInfo">
+                <p>
+                  Fransk potatissallad är det perfekta tillbehöret för den som
+                  önskar en lätt och fräsch sallad. Passar väldigt bra till
+                  gravad lax
+                </p>
+              </div>
+              <p>
+                <a href="../html-recept/recept1.html">Gå till receptet</a>
+              </p>
+            </div>
+          </div>
+          <div class="recipeList__recipe">
+            <div class="imgBox">
+              <img
+                class="imgBox__img"
+                src="../img/carrotCake1.jpeg"
+                alt="Första bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/carrotCake2.jpeg"
+                alt="Andra bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/carrotCake3.jpeg"
+                alt="Tredje bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/carrotCake4.jpeg"
+                alt="Fjärde bilden på receptet"
+              />
+            </div>
+            <div class="receptbeskrivning">
+              <h3>Morotstårta</h3>
+              <p>2022-10-25</p>
+              <div class="kategorier">
+                <span>Vegetarisk</span>
+                <span>|</span>
+                <span>Efterrätt</span>
+                <span>|</span>
+                <span>Tårtor</span>
+                <span>|</span>
+                <span>Svensk/nordisk mat</span>
+              </div>
+              <input type="button" class="btnMoreInfo" value="Mer info" />
+              <div class="shortInfo">
+                <p>
+                  Här finner du en otroligt härlig trelagers morotstårta! Genom
+                  att finriva morötterna och använda olja istället för smör i
+                  degen bevaras tårtans saftighet. Limeskal i frostingen gör det
+                  lilla extra för en otrolig smak!
+                </p>
+              </div>
+              <p>
+                <a href="../html-recept/recept1.html">Gå till receptet</a>
+              </p>
+            </div>
+          </div>
+          <div class="recipeList__recipe">
+            <div class="imgBox">
+              <img
+                class="imgBox__img"
+                src="../img/moules1.jpeg"
+                alt="Första bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/moules2.jpeg"
+                alt="Andra bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/moules3.jpeg"
+                alt="Tredje bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/moules4.jpeg"
+                alt="Fjärde bilden på receptet"
+              />
+            </div>
+            <div class="receptbeskrivning">
+              <h3>Moules Marinieres</h3>
+              <p>2022-10-25</p>
+              <div class="kategorier">
+                <span>Fisk</span>
+                <span>|</span>
+                <span>Huvudrätt</span>
+                <span>|</span>
+                <span>Grytor</span>
+                <span>|</span>
+                <span>Fransk mat</span>
+              </div>
+              <input type="button" class="btnMoreInfo" value="Mer info" />
+              <div class="shortInfo">
+                <p>
+                  Moules Marinieres är en klassisk rätt med blåmusslor från
+                  Frankrike. Med en perfekt smakbalans från havet, färska örter,
+                  vitt vin och grädde. Rekomenderat tillbehör är frasigt
+                  vitlöksbröd.
+                </p>
+              </div>
+              <p>
+                <a href="../html-recept/recept1.html">Gå till receptet</a>
+              </p>
+            </div>
+          </div>
+          <div class="recipeList__recipe">
+            <div class="imgBox">
+              <img
+                class="imgBox__img"
+                src="../img/asianSalmon1.jpeg"
+                alt="Första bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/asianSalmon2.jpeg"
+                alt="Andra bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/asianSalmon3.jpeg"
+                alt="Tredje bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/asianSalmon4.jpeg"
+                alt="Fjärde bilden på receptet"
+              />
+            </div>
+            <div class="receptbeskrivning">
+              <h3>Asiatisk lax</h3>
+              <p>2022-10-25</p>
+              <div class="kategorier">
+                <span>Lax</span>
+                <span>|</span>
+                <span>Huvudrätt</span>
+                <span>|</span>
+                <span>Gratänger</span>
+                <span>|</span>
+                <span>Asiatisk mat</span>
+              </div>
+              <input
+                type="button"
+                class="btnMoreInfo"
+                id="merInfoBtn"
+                value="Mer info"
+              />
+              <div class="shortInfo">
+                <p>
+                  Denna maträtt är sprängdfylld av smaker från det asiatiska
+                  köket! Laxen bakas med ett täcke av sweet chili, teriyaki och
+                  olika färska kryddor och passar bra som extra sås när rätten
+                  ska serveras.
+                </p>
+              </div>
+              <p>
+                <a href="../html-recept/recept1.html">Gå till receptet</a>
+              </p>
+            </div>
+          </div>
+          <div class="recipeList__recipe">
+            <div class="imgBox">
+              <img
+                class="imgBox__img"
+                src="../img/ovenSalmon1.jpeg"
+                alt="Första bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/ovenSalmon2.jpeg"
+                alt="Andra bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/ovenSalmon3.jpeg"
+                alt="Tredje bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/ovenSalmon4.jpeg"
+                alt="Fjärde bilden på receptet"
+              />
+            </div>
+            <div class="receptbeskrivning">
+              <h3>Spenat & fetaost lax</h3>
+              <p>2022-10-25</p>
+              <div class="kategorier">
+                <span>Lax</span>
+                <span>|</span>
+                <span>Huvudrätt</span>
+                <span>|</span>
+                <span>Gratänger</span>
+                <span>|</span>
+                <span>Svensk/nordisk mat</span>
+              </div>
+              <input
+                type="button"
+                class="btnMoreInfo"
+                id="merInfoBtn"
+                value="Mer info"
+              />
+              <div class="shortInfo">
+                <p>
+                  Ungsbakad lax med ett täcke av spenat och fetaostkräm. En
+                  perfekt kombination av sälta och sötmna smaksätter laxen och
+                  skapar en måltid du sent kommer att glömma! Bassar bra både
+                  tillsamans med ungsrostade rotfrukter, ris eller matvete.
+                </p>
+              </div>
+              <p>
+                <a href="../html-recept/recept1.html">Gå till receptet</a>
+              </p>
+            </div>
+          </div>
+          <div class="recipeList__recipe">
+            <div class="imgBox">
+              <img
+                class="imgBox__img"
+                src="../img/avoEgg1.jpeg"
+                alt="Första bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/avoEgg2.jpeg"
+                alt="Andra bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/avoEgg3.jpeg"
+                alt="Tredje bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/avoEgg4.jpeg"
+                alt="Fjärde bilden på receptet"
+              />
+            </div>
+            <div class="receptbeskrivning">
+              <h3>Avokado Eggs Benedict</h3>
+              <p>2022-10-25</p>
+              <div class="kategorier">
+                <span>Vegetarisk</span>
+                <span>|</span>
+                <span>Brunch</span>
+                <span>|</span>
+                <span>Mackor/wraps</span>
+                <span>|</span>
+                <span>Svensk/nordisk mat</span>
+              </div>
+              <input
+                type="button"
+                class="btnMoreInfo"
+                id="merInfoBtn"
+                value="Mer info"
+              />
+              <div class="shortInfo">
+                <p>
+                  Här hittar du den perfekta mackan till brunchen! Vi har tagit
+                  den klassiska rätten Eggs Benedict och gjort den vegetarisk.
+                  På ett rostat surdegsbröd har vi philadelphiaost, avokado,
+                  pocherat ägg och fluffig hollandaisesås.
+                </p>
+              </div>
+              <p>
+                <a href="../html-recept/recept1.html">Gå till receptet</a>
+              </p>
+            </div>
+          </div>
+          <div class="recipeList__recipe">
+            <div class="imgBox">
+              <img
+                class="imgBox__img"
+                src="../img/mooseStew1.jpeg"
+                alt="Första bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/mooseStew2.jpeg"
+                alt="Andra bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/mooseStew3.jpeg"
+                alt="Tredje bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/mooseStew4.jpeg"
+                alt="Fjärde bilden på receptet"
+              />
+            </div>
+            <div class="receptbeskrivning">
+              <h3>Älgskav</h3>
+              <p>2022-10-25</p>
+              <div class="kategorier">
+                <span>Älg</span>
+                <span>|</span>
+                <span>Huvudrätt</span>
+                <span>|</span>
+                <span>Grytor</span>
+                <span>|</span>
+                <span>Svensk/nordisk mat</span>
+              </div>
+              <input
+                type="button"
+                class="btnMoreInfo"
+                id="merInfoBtn"
+                value="Mer info"
+              />
+              <div class="shortInfo">
+                <p>
+                  Denna rätt är lätt att tillaga och kan serveras på många olika
+                  sätt. Finskivad älg tillagas med mycket rosépeppar,
+                  champinjoner, lök och grädde. Är lika god till hemlagad
+                  potatismos som i en wrap.
+                </p>
+              </div>
+              <p>
+                <a href="../html-recept/recept1.html">Gå till receptet</a>
+              </p>
+            </div>
+          </div>
+          <div class="recipeList__recipe">
+            <div class="imgBox">
+              <img
+                class="imgBox__img"
+                src="../img/avoToast1.jpeg"
+                alt="Första bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/avoToast2.jpeg"
+                alt="Andra bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/avoToast3.jpeg"
+                alt="Tredje bilden på receptet"
+              />
+              <img
+                class="imgBox__img"
+                src="../img/avoToast4.jpeg"
+                alt="Fjärde bilden på receptet"
+              />
+            </div>
+            <div class="receptbeskrivning">
+              <h3>Avokadotoast</h3>
+              <p>2022-10-25</p>
+              <div class="kategorier">
+                <span>Vegetarisk</span>
+                <span>|</span>
+                <span>Lunch</span>
+                <span>|</span>
+                <span>Mackor/wraps</span>
+                <span>|</span>
+                <span>Svensk/nordisk mat</span>
+              </div>
+              <input
+                type="button"
+                class="btnMoreInfo"
+                id="merInfoBtn"
+                value="Mer info"
+              />
+              <div class="shortInfo">
+                <p>
+                  En enkel men otroligt smakrik toast som kan självklart göras
+                  hemma i köket men tillagas bäst över en öppen eld i ett
+                  grilljärn. Denna toast innehåller allt gott man kan tänka sig
+                  och lite till, en perfekt kombination av sött, salt och hetta.
+                </p>
+              </div>
+              <p>
+                <a href="../html-recept/recept1.html">Gå till receptet</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="footerNav">
+        <div class="footerNav__section">
+          <h4>Matinspiration</h4>
+          <a href="../index.html/foodRecipies">Matrecept</a>
+          <a href="../index.html/bakingRecipies">Bakrecept</a>
+          <a href="../index.html/drinks">Dryck & drinkar</a>
+          <a href="allaRecept.html">Alla våra recept</a>
+          <a href="../index.html/tips">Tips & nyheter</a>
+        </div>
+        <div class="footerNav__section">
+          <h4>Dela ditt recept med oss</h4>
+          <a href="skapaRecept.html">Skapa recept</a>
+          <a href="mailto: info@hemmakoket.se">Mejla recept</a>
+        </div>
+        <div class="footerNav__section">
+          <h4>Följ oss på sociala medier</h4>
+          <a href="../index.html/facebookSida" target="_blank">Facebook</a>
+          <a href="../index.html/instagramSida" target="_blank">Instagram</a>
+        </div>
+        <div class="footerNav__section">
+          <h4>Kontaktinformation</h4>
+          <a href="om-oss.html#aboutUs">Om Hemmaköket</a>
+          <a href="om-oss.html#aboutUsFooter">Kontaktformulär</a>
+          <a href="mailto: info@hemmakoket.se">Mejla oss</a>
+          <a href="tel:086732520">Ring oss</a>
+        </div>
+      </section>
+      <div class="copyright">© Copyright</div>
+    </footer>
+    <script>
+      const year = new Date().getFullYear();
+      $(".copyright").append(` ${year} Hemmaköket AB`);
+
+      $(document).ready(function () {
+        $(".filterBar__filters").hide();
+
+        $(".filterBar__headding").click(function () {
+          const filterBar = $(".filterBar__filters");
+          const filterHeadding = $(".filterBar__headding").text();
+
+          if (filterHeadding === "Visa filter") {
+            $(this).text("Dölj filter");
+            $(filterBar).show();
+          } else {
+            $(this).text("Visa filter");
+            $(filterBar).hide();
+          }
+        });
+
+        $(".shortInfo").hide();
+
+        $(".btnMoreInfo").click(function () {
+          const btnVal = $(this).val();
+
+          if (btnVal === "Mer info") {
+            $(this).val("Dölj info");
+          } else {
+            $(this).val("Mer info");
+          }
+
+          $(this).siblings(".shortInfo").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>

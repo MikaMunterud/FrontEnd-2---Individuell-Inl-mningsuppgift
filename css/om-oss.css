@@ -1,0 +1,162 @@
+main {
+  padding-bottom: 32px;
+}
+
+.fullTeam {
+  display: flex;
+  flex-direction: row;
+  margin-top: 32px;
+  justify-content: space-between;
+  gap: 32px;
+}
+@media (max-width: 700px) {
+  .fullTeam {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.fullTeam__team {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (max-width: 700px) {
+  .fullTeam__team {
+    flex-direction: row;
+    width: fit-content;
+  }
+}
+.fullTeam__team__img {
+  width: 100%;
+  border-radius: 15px;
+}
+@media (max-width: 700px) {
+  .fullTeam__team__img {
+    width: 50%;
+  }
+}
+.fullTeam__team__info {
+  padding: 26px 16px 0px 16px;
+}
+@media (max-width: 700px) {
+  .fullTeam__team__info {
+    padding-left: 32px;
+    padding-right: 0px;
+  }
+}
+.fullTeam__team__info__title {
+  margin-top: 0px;
+  text-align: center;
+}
+.fullTeam__team .contactButton {
+  width: fit-content;
+  margin: 16px 0px 4px 0;
+  padding: 0px;
+  background-color: inherit;
+  color: inherit;
+  border: 0;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+}
+.fullTeam__team .contactInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 6px;
+}
+.fullTeam__team .contactInfo a {
+  width: fit-content;
+  margin: 2px 0;
+  color: inherit;
+  text-decoration: none;
+  text-align: start;
+  cursor: pointer;
+}
+
+.frameForm {
+  display: flex;
+  width: 50%;
+  max-width: 600px;
+  height: 250px;
+  padding: 16px;
+  justify-content: center;
+  border: 5px double;
+  border-radius: 25px;
+  align-items: center;
+}
+@media (max-width: 850px) {
+  .frameForm {
+    width: 60%;
+  }
+}
+@media (max-width: 700px) {
+  .frameForm {
+    width: 70%;
+  }
+}
+.frameForm__contactForm {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-weight: bold;
+}
+.frameForm__contactForm__labels {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-top: 2px;
+  margin-right: 20px;
+  font-weight: bold;
+  align-items: flex-start;
+  gap: 22px;
+}
+.frameForm__contactForm__message {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  gap: 4px;
+}
+.frameForm__contactForm__formInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+.frameForm__contactForm__formInput__box {
+  width: calc(100% - 16px);
+  border: 0;
+  outline: 0px;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #896723;
+  resize: none;
+}
+.frameForm__contactForm__formInput__btn {
+  display: flex;
+  padding: 8px 16px;
+  background-color: #fefefe;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px inset #896723;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+.frameForm__contactForm__formInput__btn:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 0 2px;
+  transition: 0.5s;
+}
+.frameForm__contactForm__formInput__btn:active {
+  transform: translate(0px, 1px);
+}
+
+/*# sourceMappingURL=om-oss.css.map */

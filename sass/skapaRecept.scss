@@ -1,0 +1,234 @@
+@import "variables";
+
+.createRecipe {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  max-width: 1000px;
+  margin-bottom: 32px;
+  background-color: $beige-color-0-3;
+  border-radius: 25px;
+  border: 5px double $gold-color;
+  justify-content: center;
+  align-self: center;
+  @media (max-width: $media-L) {
+    width: 75%;
+  }
+  @media (max-width: $media-M) {
+    width: 80%;
+  }
+  @media (max-width: $media-S) {
+    width: 85%;
+  }
+  @media (max-width: $media-XS) {
+    width: 90%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 64px);
+    padding: 16px 32px 32px 32px;
+
+    &__label {
+      width: fit-content;
+      margin: 16px 0px 12px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    &__input {
+      padding: 6px 8px;
+      border: 0;
+      outline: 0;
+      border-radius: 6px;
+      color: $gold-color;
+      font-size: 0.9rem;
+      font-family: inherit;
+    }
+    &__row {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+      gap: 32px;
+
+      &__section {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        &.heading {
+          width: 100%;
+          & .formInput {
+            width: calc(100% - 16px);
+          }
+        }
+        &.date {
+          width: fit-content;
+
+          & .formInput {
+            width: 120px;
+          }
+        }
+      }
+    }
+    &__description {
+      display: flex;
+      flex-direction: column;
+      margin: 0px 0px 16px;
+      padding-left: 24px;
+      gap: 16px;
+      &__item {
+        padding-left: 8px;
+
+        outline: 0px;
+      }
+      &__btns {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        &__btn {
+          background-color: $light-color;
+          color: inherit;
+          width: fit-content;
+          padding: 6px 16px;
+          font-size: 1rem;
+          font-weight: bold;
+          font-family: inherit;
+          border: 1px solid;
+          border-radius: 10px;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.8;
+            box-shadow: 0 0 0 2px;
+            transition: 0.5s;
+          }
+          &:active {
+            transform: translate(0px, 1px);
+          }
+        }
+      }
+    }
+  }
+  .imgInput {
+    flex-wrap: wrap;
+    gap: 12px;
+
+    &__section {
+      display: flex;
+      flex-wrap: nowrap;
+      width: calc(100% / 2 - 6px);
+      align-items: center;
+      gap: 8px;
+      @media (max-width: $media-XS) {
+        width: 100%;
+      }
+
+      &__fileInput {
+        display: none;
+        &__label {
+          background-color: $light-color;
+          padding: 6px 16px;
+          font-size: 0.9rem;
+          font-weight: bold;
+          border: 1px solid;
+          border-radius: 10px;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.8;
+            box-shadow: 0 0 0 2px;
+            transition: 0.5s;
+          }
+          &:active {
+            transform: translate(0px, 1px);
+          }
+        }
+        &__msg {
+          font-size: 0.8rem;
+          margin-right: 32px;
+        }
+      }
+    }
+    & .formInput {
+      width: min-content;
+      padding: 0px;
+    }
+  }
+
+  .categories {
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-content: space-between;
+
+    &__section {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      width: fit-content;
+      align-items: flex-start;
+      & label {
+        margin-left: 8px;
+      }
+      &__options {
+        background-color: $light-color;
+        padding: 6px 4px;
+        color: $gold-color;
+        font-size: 0.9rem;
+        font-weight: bold;
+        border: 1px solid $gold-color;
+        border-radius: 8px;
+        justify-items: center;
+        outline: none;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+          box-shadow: 0 0 0 2px;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+
+  .formTextBox {
+    width: calc(100% - 16px);
+    border: 0;
+    outline: 0;
+    padding: 6px 8px;
+    color: $gold-color;
+    display: flex;
+    font-weight: normal;
+    font-size: 0.9rem;
+    resize: none;
+    border-radius: 6px;
+  }
+
+  .btnCreateRecipe {
+    background-color: $light-color;
+    margin-top: 24px;
+    width: 40%;
+    color: $gold-color;
+    border: 1px solid $gold-color;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: inherit;
+    align-self: center;
+    padding: 8px 16px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+      box-shadow: 0 0 0 2px;
+      transition: 0.5s;
+    }
+    &:active {
+      transform: translate(0px, 1px);
+    }
+
+    &__msg {
+      margin-top: 24px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      gap: 6px;
+    }
+  }
+}

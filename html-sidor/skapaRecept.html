@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="På denna sida kan man skapa nya recept."
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/skapaRecept.css" />
+    <title>Om oss</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="companyName">
+      <h1>Mikas & Davids hemmakök</h1>
+    </header>
+    <nav class="navBar">
+      <ul class="navBar__opt">
+        <li class="navBar__opt__list">
+          <a class="navBar__opt__list__link" href="../index.html">Hem</a>
+        </li>
+        <li class="navBar__opt__list">
+          <a
+            class="navBar__opt__list__link"
+            href="../html-sidor/allaRecept.html"
+            >Alla recept</a
+          >
+        </li>
+        <li class="navBar__opt__list active">
+          <a
+            class="navBar__opt__list__link"
+            href="../html-sidor/skapaRecept.html"
+            >Skapa recept</a
+          >
+        </li>
+        <li class="navBar__opt__list">
+          <a class="navBar__opt__list__link" href="../html-sidor/om-oss.html"
+            >Om oss</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Lägg till ett nytt recept</h2>
+      <section class="createRecipe">
+        <form class="createRecipe__form" method="post">
+          <div class="createRecipe__form__row">
+            <div class="createRecipe__form__row__section heading">
+              <label class="createRecipe__form__label" for="recepieName">
+                Rubrik på receptet
+              </label>
+              <input
+                class="createRecipe__form__input"
+                type="text"
+                id="recepieName"
+                required
+              />
+            </div>
+            <div class="createRecipe__form__row__section date">
+              <label class="createRecipe__form__label" for="date">Datum</label>
+              <input
+                class="createRecipe__form__input"
+                type="date"
+                id="date"
+                required
+              />
+            </div>
+          </div>
+
+          <label class="createRecipe__form__label" for="shortDescription"
+            >Kort beskrivning</label
+          >
+          <textarea
+            class="formTextBox"
+            id="shortDescription"
+            rows="4"
+            maxlength="200"
+            placeholder="Max 200 tecken"
+            required
+          ></textarea>
+
+          <label class="createRecipe__form__label" for="description"
+            >Beskrivning</label
+          >
+          <ol class="createRecipe__form__description">
+            <li class="createRecipe__form__description__item">
+              <textarea class="formTextBox" rows="3" required></textarea>
+            </li>
+            <li class="createRecipe__form__description__item">
+              <textarea class="formTextBox" rows="3" required></textarea>
+            </li>
+            <li class="createRecipe__form__description__item">
+              <textarea class="formTextBox" rows="3" required></textarea>
+            </li>
+            <li class="createRecipe__form__description__item">
+              <textarea class="formTextBox" rows="3" required></textarea>
+            </li>
+            <li class="createRecipe__form__description__item">
+              <textarea class="formTextBox" rows="3" required></textarea>
+            </li>
+          </ol>
+          <div class="createRecipe__form__description__btns">
+            <button
+              class="createRecipe__form__description__btns__btn"
+              id="addItem"
+              type="button"
+            >
+              Lägg till beskrivning
+            </button>
+            <button
+              class="createRecipe__form__description__btns__btn"
+              id="removeItem"
+              type="button"
+            >
+              Ta bort beskrivning
+            </button>
+          </div>
+          <label class="createRecipe__form__label" for="img1"
+            >Lägg till bilder</label
+          >
+          <div class="createRecipe__form__row imgInput">
+            <div class="imgInput__section">
+              <input
+                class="imgInput__section__fileInput"
+                type="file"
+                id="img1"
+                accept="image/png, image/jpeg"
+              />
+              <label class="imgInput__section__fileInput__label" for="img1"
+                >Välj bild</label
+              >
+              <span class="imgInput__section__fileInput__msg"
+                >Ingen fil har valts</span
+              >
+            </div>
+            <div class="imgInput__section">
+              <input
+                class="imgInput__section__fileInput"
+                type="file"
+                id="img2"
+                accept="image/png, image/jpeg"
+              />
+              <label class="imgInput__section__fileInput__label" for="img2"
+                >Välj bild</label
+              >
+              <span class="imgInput__section__fileInput__msg"
+                >Ingen fil har valts</span
+              >
+            </div>
+            <div class="imgInput__section">
+              <input
+                class="imgInput__section__fileInput"
+                type="file"
+                id="img3"
+                accept="image/png, image/jpeg"
+              />
+              <label class="imgInput__section__fileInput__label" for="img3"
+                >Välj bild</label
+              >
+              <span class="imgInput__section__fileInput__msg"
+                >Ingen fil har valts</span
+              >
+            </div>
+            <div class="imgInput__section">
+              <input
+                class="imgInput__section__fileInput"
+                type="file"
+                id="img4"
+                accept="image/png, image/jpeg"
+              />
+              <label class="imgInput__section__fileInput__label" for="img4"
+                >Välj bild</label
+              >
+              <span class="imgInput__section__fileInput__msg"
+                >Ingen fil har valts</span
+              >
+            </div>
+          </div>
+          <div class="createRecipe__form__row categories">
+            <div class="categories__section">
+              <label class="createRecipe__form__label" for="ingredienser"
+                >Ingredienser</label
+              >
+              <select class="categories__section__options" id="ingredienser">
+                <option value="kyckling">Kyckling</option>
+                <option value="lax">Lax</option>
+                <option value="vegetariskt">Vegetariskt</option>
+                <option value="pasta">Pasta</option>
+                <option value="fläskfilé">Fläsk</option>
+                <option value="köttfärs">Nöt</option>
+                <option value="fisk">Fisk</option>
+                <option value="korv">Vilt</option>
+              </select>
+            </div>
+            <div class="categories__section">
+              <label class="createRecipe__form__label" for="måltider"
+                >Måltider</label
+              >
+              <select class="categories__section__options" id="måltider">
+                <option value="förrätter">Förrätt</option>
+                <option value="huvudrätter">Huvudrätt</option>
+                <option value="efterrätter">Efterrätt</option>
+                <option value="frukost">Frukost</option>
+                <option value="tilltugg/snacks/snittar">
+                  Tilltugg/snacks/snittar
+                </option>
+                <option value="bröd">Bröd</option>
+                <option value="brunch">Brunch</option>
+                <option value="bakverk">Bakverk</option>
+                <option value="smårätter/tapas">Smårätter/tapas</option>
+                <option value="tillbehör">Tillbehör</option>
+                <option value="lunch">Lunch</option>
+              </select>
+            </div>
+            <div class="categories__section">
+              <label class="createRecipe__form__label" for="typAvRatt"
+                >Typ av rätt</label
+              >
+              <select class="categories__section__options" id="typAvRatt">
+                <option value="förrätter">Pannkaka</option>
+                <option value="huvudrätter">Paj</option>
+                <option value="efterrätter">Burgare</option>
+                <option value="frukost">Såser/röror</option>
+                <option value="tilltugg/snacks/snittar">Sallad</option>
+                <option value="bröd">Lasagne</option>
+                <option value="brunch">Gratänger</option>
+                <option value="bakverk">Grytor</option>
+                <option value="smårätter/tapas">Soppa</option>
+                <option value="tillbehör">Biffar</option>
+                <option value="buffémat">Pizza</option>
+                <option value="godis">Långkok</option>
+                <option value="vardagsmiddag">Mackor/wraps</option>
+                <option value="picknick">Våfflor</option>
+                <option value="lunch">Tårtor</option>
+              </select>
+            </div>
+            <div class="categories__section">
+              <label class="createRecipe__form__label" for="varldensKok"
+                >Världens kök</label
+              >
+              <select class="categories__section__options" id="varldensKok">
+                <option value="asiatisk">Asiatisk mat</option>
+                <option value="italiensk">Italiensk mat</option>
+                <option value="svensk">Svensk/nordisk mat</option>
+                <option value="thailandsk">Thailändsk mat</option>
+                <option value="amerikansk">Amerikansk mat</option>
+                <option value="indisk">Indisk mat</option>
+                <option value="mexikansk">Mexikansk mat</option>
+                <option value="grekisk">Grekisk mat</option>
+                <option value="french">Fransk mat</option>
+                <option value="mellanostern">Mat från Mellanöstern</option>
+              </select>
+            </div>
+          </div>
+          <button class="btnCreateRecipe" type="submit">Skapa recept</button>
+          <div class="btnCreateRecipe__msg">Tack för ditt receptbidrag!</div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <section class="footerNav">
+        <div class="footerNav__section">
+          <h4>Matinspiration</h4>
+          <a href="../index.html/foodRecipies">Matrecept</a>
+          <a href="../index.html/bakingRecipies">Bakrecept</a>
+          <a href="../index.html/drinks">Dryck & drinkar</a>
+          <a href="allaRecept.html">Alla våra recept</a>
+          <a href="../index.html/tips">Tips & nyheter</a>
+        </div>
+        <div class="footerNav__section">
+          <h4>Dela ditt recept med oss</h4>
+          <a href="skapaRecept.html">Skapa recept</a>
+          <a href="mailto: info@hemmakoket.se">Mejla recept</a>
+        </div>
+        <div class="footerNav__section">
+          <h4>Följ oss på sociala medier</h4>
+          <a href="../index.html/facebookSida" target="_blank">Facebook</a>
+          <a href="../index.html/instagramSida" target="_blank">Instagram</a>
+        </div>
+        <div class="footerNav__section">
+          <h4>Kontaktinformation</h4>
+          <a href="om-oss.html#aboutUs">Om Hemmaköket</a>
+          <a href="om-oss.html#aboutUsFooter">Kontaktformulär</a>
+          <a href="mailto: info@hemmakoket.se">Mejla oss</a>
+          <a href="tel:086732520">Ring oss</a>
+        </div>
+      </section>
+      <div class="copyright">© Copyright</div>
+    </footer>
+    <script>
+      //this sets the year and name of the copyright text in the bottom of the page.
+      const year = new Date().getFullYear();
+      $(".copyright").append(` ${year} Hemmaköket AB`);
+
+      //this makes it possible 
+      $(".imgInput__section__fileInput").change(function () {
+        const input = $(this);
+        const inputSection = input.parent();
+        const inputMsg = $(".imgInput__section__fileInput__msg", inputSection);
+        const fileName = input.val()?.replace(/^[A-z]:\\.*\\/, "");
+        console.log(fileName);
+
+        inputMsg.text(fileName);
+      });
+
+      // $(document).ready(function () {
+      //   $(".createRecipe__form__label").click(function () {});
+      //   const chosenFile = $(".imgInput__section__fileInput").val();
+      //   $(".imgInput__section__fileInput__msg").text(
+      //     ".imgInput__section__fileInput".val()
+      //   );
+
+      //   $(this).siblings(".imgInput__section__fileInput").toggle();
+      // });
+
+      $(".btnCreateRecipe__msg").hide();
+
+      $(".createRecipe__form").submit(function () {
+        $(".btnCreateRecipe").fadeOut().hide();
+
+        $(".btnCreateRecipe__msg").fadeIn().show();
+
+        setTimeout(function () {
+          $(".btnCreateRecipe__msg").fadeOut("slow").hide();
+          $(".btnCreateRecipe").fadeIn().hide();
+          $("#recepieName").val("");
+          $("#date").val("");
+          $("#shortDescription").val("");
+          $(".formTextBox").val("");
+        }, 6000);
+      });
+
+      // const formMessage = $(".frameForm__contactForm__message");
+      // formMessage.hide();
+
+      // $(".frameForm__contactForm__formInput").submit(function (event) {
+      //   event.preventDefault();
+      //   const inputName = $("#name").val();
+      //   const inputEmail = $("#email").val();
+      //   const inputMessage = $("#message").val();
+      //   const formLabels = $(".frameForm__contactForm__labels");
+      //   const formInputs = $(".frameForm__contactForm__formInput");
+
+      //   formLabels.fadeOut("slow").hide();
+      //   $(this).fadeOut("slow").hide();
+
+      //   formMessage.fadeIn().show();
+      //   setTimeout(function () {
+      //     formMessage.fadeOut().hide();
+      //     formLabels.fadeIn("slow");
+      //     formInputs.fadeIn("slow");
+      //     $("#name").val("");
+      //     $("#email").val("");
+      //     $("#message").val("");
+      //   }, 6000);
+      // });
+    </script>
+  </body>
+</html>

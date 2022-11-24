@@ -1,0 +1,77 @@
+@import "variables";
+
+.filterBar {
+  display: flex;
+  flex-direction: column;
+  min-height: 30px;
+  margin-bottom: 32px;
+
+  background-color: $beige-color-0-3;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom: 5px double;
+
+  &__headding {
+    cursor: pointer;
+    display: block;
+  }
+
+  &__filters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 18px;
+    gap: 32px;
+    &__list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      width: fit-content;
+      
+      & label {
+        padding-left: 12px;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      & select {
+        
+        background-color: $light-color;
+        color: $gold-color;
+        width: 100%;
+        outline: 0px;
+        padding: 6px 12px 6px 12px;
+        border-radius: 10px;
+        border: 1px solid $gold-color;
+        font-size: 1rem;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+          box-shadow: 0 0 0 2px;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  & button {
+    border-width: 1px;
+    padding: 7px 12px;
+    background-color: $light-color;
+    color: $gold-color;
+    border-radius: 10px;
+    border: 1px solid $gold-color;
+    font-size: 1rem;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+      box-shadow: 0 0 0 2px;
+      transition: 0.5s;
+    }
+    &:active {
+      transform: translate(0px, 1px);
+    }
+  }
+}

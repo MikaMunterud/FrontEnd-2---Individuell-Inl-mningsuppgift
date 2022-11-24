@@ -1,0 +1,71 @@
+.filterBar {
+  display: flex;
+  flex-direction: column;
+  min-height: 30px;
+  margin-bottom: 32px;
+  background-color: rgba(148, 132, 112, 0.3);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom: 5px double;
+}
+.filterBar__headding {
+  cursor: pointer;
+  display: block;
+}
+.filterBar__filters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 18px;
+  gap: 32px;
+}
+.filterBar__filters__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: fit-content;
+}
+.filterBar__filters__list label {
+  padding-left: 12px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.filterBar__filters__list select {
+  background-color: #fefefe;
+  color: #896723;
+  width: 100%;
+  outline: 0px;
+  padding: 6px 12px 6px 12px;
+  border-radius: 10px;
+  border: 1px solid #896723;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.filterBar__filters__list select:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 0 2px;
+  transition: 0.5s;
+}
+.filterBar button {
+  border-width: 1px;
+  padding: 7px 12px;
+  background-color: #fefefe;
+  color: #896723;
+  border-radius: 10px;
+  border: 1px solid #896723;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.filterBar button:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 0 2px;
+  transition: 0.5s;
+}
+.filterBar button:active {
+  transform: translate(0px, 1px);
+}
+
+/*# sourceMappingURL=allaRecept.css.map */

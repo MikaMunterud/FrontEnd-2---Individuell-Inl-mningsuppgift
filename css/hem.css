@@ -1,0 +1,17 @@
+main section {
+  margin-top: 32px;
+  position: relative;
+  text-align: center;
+  overflow: scroll;
+  z-index: 2;
+}
+main section .imgText {
+  position: absolute;
+  align-self: center;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.8rem;
+}
+
+/*# sourceMappingURL=hem.css.map */

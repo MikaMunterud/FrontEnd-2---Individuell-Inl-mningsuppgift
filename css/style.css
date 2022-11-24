@@ -1,0 +1,259 @@
+html {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+  background-color: #fefefe;
+  color: #896723;
+  margin: 0px;
+  position: relative;
+  min-width: 650px;
+  font-size: 1.2rem;
+  max-width: 1800px;
+  margin-inline: auto;
+  background-image: url("../img/marmor2.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  display: flex;
+  border-radius: 25px;
+  margin: 32px;
+  padding: 16px;
+  border: 5px double #896723;
+  font-size: 3rem;
+  text-align: center;
+  justify-content: space-around;
+}
+
+h2 {
+  margin-bottom: 12px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+h4 {
+  margin-bottom: 0px;
+  font-size: 1.3rem;
+}
+
+p {
+  margin: 0;
+  text-align: justify;
+}
+
+.companyName {
+  display: flex;
+  flex-direction: column;
+}
+
+.navBar {
+  position: sticky;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(148, 132, 112, 0.8);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  z-index: 3;
+}
+.navBar__opt {
+  position: relative;
+  display: flex;
+  list-style-type: none;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  justify-content: space-around;
+}
+.navBar__opt__list {
+  width: 100%;
+  border-bottom-right-radius: 25px;
+  text-align: center;
+}
+.navBar__opt__list__link {
+  display: block;
+  padding: 24px 0px;
+  color: #fefefe;
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+@media (max-width: 700px) {
+  .navBar__opt__list__link {
+    font-size: 1.5rem;
+  }
+}
+.navBar__opt__list:hover:not(.active) {
+  background-color: rgba(238, 227, 214, 0.4);
+}
+.navBar__opt .active {
+  background-color: rgba(97, 82, 52, 0.6196078431);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 32px;
+}
+
+.imgFullView {
+  width: calc(100% - 10px);
+  margin: 0px;
+  border: 5px double #896723;
+  border-radius: 25px;
+  align-self: center;
+}
+
+.imgBox {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  border: 5px double #896723;
+  border-radius: 15px;
+  gap: 8px;
+}
+@media (max-width: 700px) {
+  .imgBox {
+    width: 50%;
+    height: min-content;
+  }
+}
+.imgBox__img {
+  border-radius: 15px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.recipeList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 700px) {
+  .recipeList {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.recipeList__recipe {
+  display: flex;
+  flex-direction: column;
+  width: calc(31.6666666667% - 78px);
+  height: fit-content;
+  margin: 0px 0px 32px 0px;
+  padding: 32px;
+  background-color: rgba(238, 227, 214, 0.6);
+  border: 5px double #896723;
+  border-radius: 25px;
+  text-align: start;
+}
+@media (max-width: 1000px) {
+  .recipeList__recipe {
+    width: calc(47.5% - 68px);
+  }
+}
+@media (max-width: 700px) {
+  .recipeList__recipe {
+    flex-direction: row;
+    width: fit-content;
+  }
+}
+.recipeList__recipe:hover {
+  background-color: rgba(238, 227, 214, 0.3);
+  backdrop-filter: blur(25px);
+}
+@media (max-width: 700px) {
+  .recipeList__recipe .receptbeskrivning {
+    width: 50%;
+    margin-left: 32px;
+  }
+}
+.recipeList__recipe h3 {
+  text-align: start;
+  margin: 16px 0px 8px 0px;
+}
+@media (max-width: 700px) {
+  .recipeList__recipe h3 {
+    margin-top: 0px;
+  }
+}
+.recipeList__recipe p {
+  font-size: 1rem;
+  margin: 0px;
+}
+.recipeList__recipe .kategorier {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 8px 0px 4px 0px;
+  gap: 8px;
+}
+.recipeList__recipe .btnMoreInfo {
+  color: inherit;
+  width: fit-content;
+  font-weight: bold;
+  margin: 4px 0px;
+  cursor: pointer;
+  border: 0;
+  background-color: inherit;
+  text-align: left;
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 0px;
+}
+.recipeList__recipe .shortInfo {
+  margin: 4px 8px;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+.recipeList__recipe a {
+  color: inherit;
+  font-size: 1.2rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px 0px;
+  background-color: rgba(148, 132, 112, 0.6);
+  align-items: center;
+}
+footer .copyright {
+  position: static;
+  align-self: flex-start;
+  margin: 32px 0px 0px 32px;
+  opacity: 80%;
+}
+footer .footerNav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: end;
+  width: calc(100% - 32px);
+  justify-content: space-between;
+}
+footer .footerNav__section {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 32px 0px 0px;
+  gap: 8px;
+}
+footer .footerNav__section a {
+  padding-left: 8px;
+  color: #896723;
+  text-decoration: none;
+  width: fit-content;
+}
+
+/*# sourceMappingURL=style.css.map */
