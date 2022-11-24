@@ -49,20 +49,26 @@
         <div>
           <h2>Om Mikas och Davids hemmakök</h2>
           <p>
-            Mika har under flera år Allt började efter en resa till Afrika. 
-            Under flera år har Mika och David 
+            Hemmaköket är den perfekta plattformen för den matglada och nyfikna
+            personen som vill prova något nytt i sitt egna hemmakök! Här samlas
+            recept som har testats många gånger om och som regelbundet updateras
+            när förbättringar hittas. <br /><br />
+            Du som använda har även möjligheten att dela dina recept med oss för
+            att kunna dela det till alla våra användare!
           </p>
         </div>
         <div>
           <h3>Hemmakökets team</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-            rem, dicta dignissimos minima vel asperiores ad ipsum tenetur
-            quisquam dolore iure fugiat perferendis nam? Totam blanditiis
-            reiciendis dolorem tenetur autem! Ipsam pariatur nesciunt, iste nisi
-            eius, incidunt molestiae iusto ad est et obcaecati distinctio,
-            consectetur facilis nobis aperiam aut earum omnis sit expedita
-            minima. Minima quaerat iure tempora quam illo!
+            Mika har under flera år rest världen över och provat mat från många
+            olika kulturer. Detta har förstärkt hennes matintresse och
+            nyfikenhet att återskapa den goda maten hon har upplevt och lägga
+            till sin egna prägel på dem. <br /><br />
+            Under en resa i Afrika januari 2022 träffade Mika den
+            matentusiastiska David och sedan dess har de hållt samman och delat
+            deras matglädje med familj och vänner. Nu delar de med sig av alla
+            dessa härliga recept som de har samlat på sig och fler kommer att
+            komma!
           </p>
         </div>
         <div class="fullTeam">
@@ -152,7 +158,7 @@
         alt="Bild på teamet"
       />
     </main>
-    
+
     <footer id="aboutUsFooter">
       <!-- <section class="footerNav">
         <div class="footerNav__section">
@@ -235,7 +241,7 @@
     <script>
       const year = new Date().getFullYear();
       $(".copyright").append(` ${year} Hemmaköket AB`);
-      
+
       const formMessage = $(".frameForm__contactForm__message");
       formMessage.hide();
 
@@ -247,17 +253,16 @@
         const formLabels = $(".frameForm__contactForm__labels");
         const formInputs = $(".frameForm__contactForm__formInput");
         const form = $(this);
-          formLabels.fadeOut("slow").hide();
-          form.fadeOut("slow").hide();
+        formLabels.fadeOut("slow").hide();
+        form.fadeOut("slow").hide();
 
-          formMessage.fadeIn().show();
-          setTimeout(function () {
-            formMessage.fadeOut().hide();
-            formLabels.fadeIn("slow");
-            formInputs.fadeIn("slow");
-            form.trigger("reset");
-          }, 6000);
-        
+        formMessage.fadeIn().show();
+        setTimeout(function () {
+          formMessage.fadeOut().hide();
+          formLabels.fadeIn("slow");
+          formInputs.fadeIn("slow");
+          form.trigger("reset");
+        }, 6000);
       });
 
       $(document).ready(function () {
