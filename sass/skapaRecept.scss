@@ -4,7 +4,7 @@
 .createRecipe {
   display: flex;
   flex-direction: row;
-  width: 70%;
+  width: 90%;
   max-width: 1000px;
   margin-bottom: 32px;
   background-color: $beige-color-0-3;
@@ -12,16 +12,16 @@
   border-radius: 25px;
   justify-content: center;
   align-self: center;
-  @media (max-width: $media-XS) {
-    width: 90%;
-  }
-  @media (max-width: $media-S) {
+  @media (min-width: $media-XS) {
     width: 85%;
   }
-  @media (max-width: $media-M) {
+  @media (min-width: $media-M) {
     width: 80%;
   }
-  @media (max-width: $media-L) {
+  @media (min-width: $media-L) {
+    width: 75%;
+  }
+  @media (min-width: $media-XL) {
     width: 75%;
   }
 
@@ -180,11 +180,16 @@
     flex-wrap: wrap;
 
     justify-content: space-between;
-
+@media (max-width: $media-S) {
+  flex-direction: column;
+}
     &__ingredient {
       width: calc(100% / 2 - 32px);
       padding-left: 8px;
       gap: 4px;
+      @media (max-width: $media-S) {
+        width: calc(100% - 32px);
+      }
       & .formInputIngredient {
         display: flex;
         width: 100%;
@@ -204,7 +209,8 @@
 
         &__qty {
           display: flex;
-          width: 70px;
+          width: 55px;
+          text-align: center;
           margin-bottom: 8px;
           padding: 6px 8px;
           font-weight: normal;

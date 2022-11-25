@@ -1,7 +1,7 @@
 .createRecipe {
   display: flex;
   flex-direction: row;
-  width: 70%;
+  width: 90%;
   max-width: 1000px;
   margin-bottom: 32px;
   background-color: rgba(148, 132, 112, 0.3);
@@ -10,22 +10,22 @@
   justify-content: center;
   align-self: center;
 }
-@media (max-width: 700px) {
-  .createRecipe {
-    width: 90%;
-  }
-}
-@media (max-width: 850px) {
+@media (min-width: 700px) {
   .createRecipe {
     width: 85%;
   }
 }
-@media (max-width: 1000px) {
+@media (min-width: 1000px) {
   .createRecipe {
     width: 80%;
   }
 }
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
+  .createRecipe {
+    width: 75%;
+  }
+}
+@media (min-width: 1400px) {
   .createRecipe {
     width: 75%;
   }
@@ -190,10 +190,20 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 850px) {
+  .createRecipe .ingredientsList {
+    flex-direction: column;
+  }
+}
 .createRecipe .ingredientsList__ingredient {
   width: calc(50% - 32px);
   padding-left: 8px;
   gap: 4px;
+}
+@media (max-width: 850px) {
+  .createRecipe .ingredientsList__ingredient {
+    width: calc(100% - 32px);
+  }
 }
 .createRecipe .ingredientsList__ingredient .formInputIngredient {
   display: flex;
@@ -214,7 +224,8 @@
 }
 .createRecipe .ingredientsList__ingredient .formInputIngredient__qty {
   display: flex;
-  width: 70px;
+  width: 55px;
+  text-align: center;
   margin-bottom: 8px;
   padding: 6px 8px;
   font-weight: normal;
