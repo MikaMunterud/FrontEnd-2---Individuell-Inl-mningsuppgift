@@ -87,6 +87,215 @@
           ></textarea>
 
           <label class="createRecipe__form__label" for="description"
+            >Ingredienser</label
+          >
+          <ol class="createRecipe__form__description ingredientsList">
+            <li class="ingredientsList__ingredient">
+              <div class="formInputIngredient">
+                <input
+                  class="formInputIngredient__ingredient"
+                  oninput="this.value = this.value.replace(/^([a-zA-Z]+\s)*[a-zA-Z]*$/, '')"
+                  placeholder="Ingrediens"
+                  required
+                />
+                <input
+                  class="formInputIngredient__qty"
+                  type="text"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+                  placeholder="Kvantitet"
+                  required
+                />
+                <select class="formInputIngredient__unit">
+                  <option value="l">liter</option>
+                  <option value="dl">dl</option>
+                  <option value="msk">cl</option>
+                  <option value="tsk">ml</option>
+                  <option value="msk">msk</option>
+                  <option value="tsk">tsk</option>
+                  <option value="nypa">nypa</option>
+                  <option value="kg">kg</option>
+                  <option value="g">g</option>
+                  <option value="mg">mg</option>
+                  <option value="st">st</option>
+                  <option value="">tomt</option>
+                </select>
+              </div>
+            </li>
+            <li class="ingredientsList__ingredient">
+              <div class="formInputIngredient">
+                <input
+                  class="formInputIngredient__ingredient"
+                  oninput="this.value = this.value.replace(/^([a-zA-Z]+\s)*[a-zA-Z]*$/, '')"
+                  placeholder="Ingrediens"
+                  required
+                />
+                <input
+                  class="formInputIngredient__qty"
+                  type="text"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+                  placeholder="Kvantitet"
+                  required
+                />
+                <select class="formInputIngredient__unit">
+                  <option value="l">liter</option>
+                  <option value="dl">dl</option>
+                  <option value="msk">cl</option>
+                  <option value="tsk">ml</option>
+                  <option value="msk">msk</option>
+                  <option value="tsk">tsk</option>
+                  <option value="nypa">nypa</option>
+                  <option value="kg">kg</option>
+                  <option value="g">g</option>
+                  <option value="mg">mg</option>
+                  <option value="st">st</option>
+                  <option value="">tomt</option>
+                </select>
+              </div>
+            </li>
+            <li class="ingredientsList__ingredient">
+              <div class="formInputIngredient">
+                <input
+                  class="formInputIngredient__ingredient"
+                  oninput="this.value = this.value.replace(/^([a-zA-Z]+\s)*[a-zA-Z]*$/, '')"
+                  placeholder="Ingrediens"
+                  required
+                />
+                <input
+                  class="formInputIngredient__qty"
+                  type="text"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+                  placeholder="Kvantitet"
+                  required
+                />
+                <select class="formInputIngredient__unit">
+                  <option value="l">liter</option>
+                  <option value="dl">dl</option>
+                  <option value="msk">cl</option>
+                  <option value="tsk">ml</option>
+                  <option value="msk">msk</option>
+                  <option value="tsk">tsk</option>
+                  <option value="nypa">nypa</option>
+                  <option value="kg">kg</option>
+                  <option value="g">g</option>
+                  <option value="mg">mg</option>
+                  <option value="st">st</option>
+                  <option value="">tomt</option>
+                </select>
+              </div>
+            </li>
+            <li class="ingredientsList__ingredient">
+              <div class="formInputIngredient">
+                <input
+                  class="formInputIngredient__ingredient"
+                  oninput="this.value = this.value.replace(/^([a-zA-Z]+\s)*[a-zA-Z]*$/, '')"
+                  placeholder="Ingrediens"
+                  required
+                />
+                <input
+                  class="formInputIngredient__qty"
+                  type="text"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+                  placeholder="Kvantitet"
+                  required
+                />
+                <select class="formInputIngredient__unit">
+                  <option value="l">liter</option>
+                  <option value="dl">dl</option>
+                  <option value="msk">cl</option>
+                  <option value="tsk">ml</option>
+                  <option value="msk">msk</option>
+                  <option value="tsk">tsk</option>
+                  <option value="nypa">nypa</option>
+                  <option value="kg">kg</option>
+                  <option value="g">g</option>
+                  <option value="mg">mg</option>
+                  <option value="st">st</option>
+                  <option value="">tomt</option>
+                </select>
+              </div>
+            </li>
+            <li class="ingredientsList__ingredient">
+              <div class="formInputIngredient">
+                <input
+                  class="formInputIngredient__ingredient"
+                  oninput="this.value = this.value.replace(/^([a-zA-Z]+\s)*[a-zA-Z]*$/, '')"
+                  placeholder="Ingrediens"
+                  required
+                />
+                <input
+                  class="formInputIngredient__qty"
+                  type="text"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+                  placeholder="Kvantitet"
+                  required
+                />
+                <select class="formInputIngredient__unit">
+                  <option value="l">liter</option>
+                  <option value="dl">dl</option>
+                  <option value="msk">cl</option>
+                  <option value="tsk">ml</option>
+                  <option value="msk">msk</option>
+                  <option value="tsk">tsk</option>
+                  <option value="nypa">nypa</option>
+                  <option value="kg">kg</option>
+                  <option value="g">g</option>
+                  <option value="mg">mg</option>
+                  <option value="st">st</option>
+                  <option value="">tomt</option>
+                </select>
+              </div>
+            </li>
+            <li class="ingredientsList__ingredient">
+              <div class="formInputIngredient">
+                <input
+                  class="formInputIngredient__ingredient"
+                  oninput="this.value = this.value.replace(/^([a-zA-Z]+\s)*[a-zA-Z]*$/, '')"
+                  placeholder="Ingrediens"
+                  required
+                />
+                <input
+                  class="formInputIngredient__qty"
+                  type="text"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+                  placeholder="Kvantitet"
+                  required
+                />
+                <select class="formInputIngredient__unit">
+                  <option value="l">liter</option>
+                  <option value="dl">dl</option>
+                  <option value="msk">cl</option>
+                  <option value="tsk">ml</option>
+                  <option value="msk">msk</option>
+                  <option value="tsk">tsk</option>
+                  <option value="nypa">nypa</option>
+                  <option value="kg">kg</option>
+                  <option value="g">g</option>
+                  <option value="mg">mg</option>
+                  <option value="st">st</option>
+                  <option value="">tomt</option>
+                </select>
+              </div>
+            </li>
+          </ol>
+          <div class="createRecipe__form__description__btns">
+            <button
+              class="createRecipe__form__description__btns__btn"
+              id="addIngredient"
+              type="button"
+            >
+              Lägg till ingredienser
+            </button>
+            <button
+              class="createRecipe__form__description__btns__btn"
+              id="removeIngredient"
+              type="button"
+            >
+              Ta bort ingredienser
+            </button>
+            <span class="removeIgredient__msg"></span>
+          </div>
+
+          <label class="createRecipe__form__label" for="description"
             >Beskrivning</label
           >
           <ol class="createRecipe__form__description">

@@ -47,10 +47,41 @@ $(document).ready(function () {
     inputMsg.text(fileName);
   });
 
-  /*this will add another description box in the end of the list of
+  /*this will add another ingredient box in the end of the list of
+   *ingredient boxes.
+   */
+  $("#addIngredient").click(function () {
+    const ingredientBox = $(this).parent().prev().children().last();
+    const ingredientList = $(this).parent().prev();
+    const addIngredient = ingredientBox.clone();
+console.log()
+    ingredientList.append(addIngredient);
+  });
+
+  /*this will remove the last ingredient box in the end of the list of
+   *ingredient boxes. The user cannot remove a ingredient box if there
+   *is only one left and then a message will appear.
+   */
+  $("#removeIngredient").click(function () {
+    const ingredientList = $(this).parent().prev().children();
+    const ingredientBox = $(this).parent().prev().children().last();
+
+    if (ingredientList.length > 2) {
+      ingredientBox.remove();
+    } else {
+      $(".removeIgredient__msg").fadeIn("slow");
+      $(".removeIgredient__msg").text("Du måste ha minst 2 ingredienser");
+      setTimeout(function () {
+        $(".removeIgredient__msg").fadeOut("slow");
+        $(".removeIgredient__msg").text("");
+      }, 3000);
+    }
+  });
+
+    /*this will add another description box in the end of the list of
    *description boxes.
    */
-  $("#addItem").click(function () {
+   $("#addItem").click(function () {
     const descriptionBox = $(this).parent().prev().children().last();
     const descriptionList = $(this).parent().prev();
     const addDescription = descriptionBox.clone();
@@ -62,7 +93,7 @@ $(document).ready(function () {
    *description boxes. The user cannot remove a description box if there
    *is only one left and then a message will appear.
    */
-  $("#removeItem").click(function () {
+   $("#removeItem").click(function () {
     const descriptionList = $(this).parent().prev().children();
     const descriptionBox = $(this).parent().prev().children().last();
 

@@ -184,6 +184,54 @@
   box-shadow: 0 0 0 2px;
   transition: 0.5s;
 }
+.createRecipe .ingredientsList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.createRecipe .ingredientsList__ingredient {
+  width: calc(50% - 32px);
+  padding-left: 8px;
+  gap: 4px;
+}
+.createRecipe .ingredientsList__ingredient .formInputIngredient {
+  display: flex;
+  width: 100%;
+  font-size: 0.9rem;
+  gap: 8px;
+}
+.createRecipe .ingredientsList__ingredient .formInputIngredient__ingredient {
+  display: flex;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 6px 8px;
+  font-weight: normal;
+  border: 0;
+  border-radius: 6px;
+  outline: 0;
+  color: #896723;
+}
+.createRecipe .ingredientsList__ingredient .formInputIngredient__qty {
+  display: flex;
+  width: 70px;
+  margin-bottom: 8px;
+  padding: 6px 8px;
+  font-weight: normal;
+  border: 0;
+  border-radius: 6px;
+  outline: 0;
+  color: #896723;
+}
+.createRecipe .ingredientsList__ingredient .formInputIngredient__unit {
+  width: fit-content;
+  height: 28px;
+  font-size: inherit;
+  color: #896723;
+  border: 0;
+  border-radius: 6px;
+  outline: 0;
+}
 .createRecipe .formTextBox {
   display: flex;
   width: calc(100% - 16px);
@@ -195,6 +243,10 @@
   border-radius: 6px;
   outline: 0;
   resize: none;
+}
+.createRecipe .removeIgredient__msg {
+  font-size: 0.9rem;
+  align-self: center;
 }
 .createRecipe .removeItem__msg {
   font-size: 0.9rem;
