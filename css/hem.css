@@ -1,16 +1,48 @@
 .homeSection {
-  margin-top: 32px;
   position: relative;
+  margin-top: 32px;
   text-align: center;
   z-index: 2;
 }
 .homeSection .imgText {
   position: absolute;
-  align-self: center;
   top: 40%;
   left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.8rem;
+  width: 50%;
+  align-self: center;
+  transform: translate(-45%, -45%);
+  font-size: 1.5rem;
+}
+@media (min-width: 700px) {
+  .homeSection .imgText {
+    font-size: 1.8rem;
+    transform: translate(-45%, -45%);
+  }
+}
+@media (min-width: 850px) {
+  .homeSection .imgText {
+    font-size: 2rem;
+    transform: translate(-45%, -42%);
+  }
+}
+@media (min-width: 1000px) {
+  .homeSection .imgText {
+    width: 60%;
+    font-size: 2.1rem;
+    transform: translate(-43%, -10%);
+  }
+}
+@media (min-width: 1200px) {
+  .homeSection .imgText {
+    font-size: 2.5rem;
+    transform: translateX(-43%);
+  }
+}
+@media (min-width: 1400px) {
+  .homeSection .imgText {
+    font-size: 2.8rem;
+    transform: translateX(-43%);
+  }
 }
 
 /*# sourceMappingURL=hem.css.map */

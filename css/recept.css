@@ -90,23 +90,25 @@
 .recepie__frame .overview__imgBoxSmall img {
   width: calc(25% - 16px);
   border-radius: 10px;
-  cursor: pointer;
   object-fit: cover;
+  cursor: pointer;
+}
+.recepie__frame .overview__imgBoxSmall img:hover {
+  opacity: 0.7;
 }
 .recepie__frame .overview__imgBoxSmall img:hover {
   scale: 1.15;
-  opacity: 0.7;
 }
 .recepie__frame .overview__imgBoxWide {
   display: flex;
-  align-self: center;
   justify-content: center;
+  align-self: center;
 }
 .recepie__frame .overview__imgBoxWide .wide-img {
-  width: 100%;
-  border-radius: 15px;
-  border: 5px double #896723;
   display: none;
+  width: 100%;
+  border: 5px double #896723;
+  border-radius: 15px;
   object-fit: cover;
 }
 .recepie__frame .fullRecipe__nav {

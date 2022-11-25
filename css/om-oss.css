@@ -55,10 +55,10 @@ main {
   padding: 0px;
   background-color: inherit;
   color: inherit;
-  border: 0;
   font-family: inherit;
   font-size: 1.2rem;
   font-weight: bold;
+  border: 0;
   text-align: left;
   cursor: pointer;
 }
@@ -83,9 +83,9 @@ main {
   max-width: 600px;
   height: 250px;
   padding: 16px;
-  justify-content: center;
-  border: 5px double;
+  border: 5px double #896723;
   border-radius: 25px;
+  justify-content: center;
   align-items: center;
 }
 @media (max-width: 850px) {
@@ -129,13 +129,13 @@ main {
 }
 .frameForm__contactForm__formInput__box {
   width: calc(100% - 16px);
-  border: 0;
-  outline: 0px;
-  border-radius: 6px;
   padding: 6px 8px;
-  font-weight: normal;
-  font-size: 0.9rem;
   color: #896723;
+  font-size: 0.9rem;
+  font-weight: normal;
+  border: 0;
+  border-radius: 6px;
+  outline: 0px;
   resize: none;
 }
 .frameForm__contactForm__formInput__btn {
@@ -146,10 +146,10 @@ main {
   font-family: inherit;
   font-size: 1.2rem;
   font-weight: bold;
-  border: 2px inset #896723;
+  border: 2px solid #896723;
   border-radius: 8px;
-  cursor: pointer;
   align-self: flex-end;
+  cursor: pointer;
 }
 .frameForm__contactForm__formInput__btn:hover {
   opacity: 0.8;

@@ -1,28 +1,28 @@
 @import "variables";
+@import "mixin";
 
 .filterBar {
   display: flex;
   flex-direction: column;
   min-height: 30px;
   margin-bottom: 32px;
-
   background-color: $beige-color-0-3;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   border-bottom: $borderFrame;
   &__headding {
-    cursor: pointer;
     display: block;
+    cursor: pointer;
   }
 
   &__filters {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-around;
     width: 100%;
     margin-bottom: 18px;
+    justify-content: space-around;
+    align-items: flex-end;
     gap: 32px;
     &__list {
       display: flex;
@@ -31,46 +31,33 @@
       width: fit-content;
       
       & label {
-        padding-left: 12px;
         margin-bottom: 8px;
+        padding-left: 12px;
         font-weight: bold;
       }
 
       & select {
-        
+        width: 100%;
+        padding: 6px 12px;
         background-color: $light-color;
         color: $gold-color;
-        width: 100%;
-        outline: 0px;
-        padding: 6px 12px 6px 12px;
-        border-radius: 10px;
-        border: 1px solid $gold-color;
         font-size: 1rem;
+        border-radius: 10px;
+        border: 1px solid;
+        outline: 0px;
         cursor: pointer;
-        &:hover {
-          opacity: 0.8;
-          box-shadow: 0 0 0 2px;
-          transition: 0.5s;
-        }
+       @include btnEffect-active;
       }
     }
   }
   & button {
-    border-width: 1px;
     padding: 7px 12px;
     background-color: $light-color;
     color: $gold-color;
-    border-radius: 10px;
-    border: 1px solid $gold-color;
     font-size: 1rem;
+    border: 1px solid $gold-color;
+    border-radius: 10px;
     cursor: pointer;
-    &:hover {
-      opacity: 0.8;
-      box-shadow: 0 0 0 2px;
-      transition: 0.5s;
-    }
-    &:active {
-      transform: translate(0px, 1px);
-    }
+    @include btnEffect-active;
   }
 }

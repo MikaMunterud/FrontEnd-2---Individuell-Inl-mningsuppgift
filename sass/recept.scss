@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixin";
 
 .recepie {
   display: flex;
@@ -52,9 +53,7 @@
         align-self: flex-end;
         text-decoration: none;
         cursor: pointer;
-        &:hover {
-          opacity: 0.7;
-        }
+        @include hoverOpacity;
         &.fullView {
           display: flex;
           @media (max-width: $media-M) {
@@ -81,7 +80,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        
         width: 100%;
         margin: 16px 0px;
         gap: 16px;
@@ -89,26 +87,21 @@
 
         & img {
           width: calc((100% / 4) - 16px);
-          
           border-radius: 10px;
-          cursor: pointer;
-
           object-fit: cover;
-          &:hover {
-            scale: 1.15;
-            opacity: 0.7;
-          }
+          cursor: pointer;
+          @include hoverOpacityScale ;
         }
       }
       &__imgBoxWide {
         display: flex;
-        align-self: center;
         justify-content: center;
+        align-self: center;
         & .wide-img {
-          width: 100%;
-          border-radius: 15px;
-          border: $borderFrame;
           display: none;
+          width: 100%;
+          border: $borderFrame;
+          border-radius: 15px;
           object-fit: cover;
         }
       }
@@ -123,9 +116,7 @@
 
         &__heading {
           cursor: pointer;
-          &:hover {
-            opacity: 0.7;
-          }
+          @include hoverOpacity;
         }
       }
       &__ingredients {
@@ -163,7 +154,6 @@
 
           &__item {
             padding: 0px 32px 0px 12px;
-
             text-align: justify;
           }
         }

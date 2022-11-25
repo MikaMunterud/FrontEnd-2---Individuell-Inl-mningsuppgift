@@ -3,29 +3,29 @@ html {
 }
 
 body {
-  background-color: #fefefe;
-  color: #896723;
-  margin: 0px;
   position: relative;
-  min-width: 650px;
-  font-size: 1.2rem;
-  max-width: 1800px;
   margin-inline: auto;
+  min-width: 650px;
+  max-width: 1800px;
+  margin: 0px;
   background-image: url("../img/marmor2.webp");
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #fefefe;
+  color: #896723;
+  font-size: 1.2rem;
 }
 
 h1 {
   display: flex;
-  border-radius: 25px;
   margin: 32px;
   padding: 16px;
   border: 5px double #896723;
+  border-radius: 25px;
+  background-image: url("../img/marmor3.webp");
   font-size: 3rem;
   text-align: center;
   justify-content: space-around;
-  background-image: url("../img/marmor3.webp");
 }
 
 h2 {
@@ -46,6 +46,7 @@ h4 {
 
 p {
   margin: 0;
+  line-height: 1.5em;
   text-align: justify;
 }
 
@@ -61,17 +62,16 @@ p {
   flex-direction: row;
   background-color: rgba(148, 132, 112, 0.8);
   backdrop-filter: blur(8px);
-  overflow: hidden;
   z-index: 3;
 }
 .navBar__opt {
   position: relative;
   display: flex;
-  list-style-type: none;
   flex-wrap: nowrap;
   width: 100%;
   margin: 0px;
   padding: 0px;
+  list-style-type: none;
   justify-content: space-around;
 }
 .navBar__opt__list {
@@ -85,8 +85,8 @@ p {
   padding: 24px 0px;
   color: #fefefe;
   font-size: 1.6rem;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
 }
 @media (max-width: 700px) {
   .navBar__opt__list__link {
@@ -130,9 +130,9 @@ main {
   }
 }
 .imgBox__img {
-  border-radius: 12px;
-  width: 100%;
   object-fit: cover;
+  width: 100%;
+  border-radius: 12px;
 }
 
 .recipeList {
@@ -172,7 +172,6 @@ main {
 }
 .recipeList__recipe:hover {
   background-color: rgba(238, 227, 214, 0.3);
-  backdrop-filter: blur(25px);
 }
 @media (max-width: 700px) {
   .recipeList__recipe .receptbeskrivning {
@@ -181,8 +180,8 @@ main {
   }
 }
 .recipeList__recipe h3 {
-  text-align: start;
   margin: 16px 0px 8px 0px;
+  text-align: start;
 }
 @media (max-width: 700px) {
   .recipeList__recipe h3 {
@@ -190,8 +189,8 @@ main {
   }
 }
 .recipeList__recipe p {
-  font-size: 1rem;
   margin: 0px;
+  font-size: 1rem;
 }
 .recipeList__recipe .kategorier {
   display: flex;
@@ -201,17 +200,17 @@ main {
   gap: 8px;
 }
 .recipeList__recipe .btnMoreInfo {
-  color: inherit;
   width: fit-content;
-  font-weight: bold;
   margin: 4px 0px;
-  cursor: pointer;
+  padding: 0px;
   border: 0;
   background-color: inherit;
-  text-align: left;
+  color: inherit;
   font-family: inherit;
   font-size: 1.2rem;
-  padding: 0px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
 }
 .recipeList__recipe .shortInfo {
   margin: 4px 8px;
@@ -241,8 +240,8 @@ footer .footerNav {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-self: end;
   width: calc(100% - 32px);
+  align-self: end;
   justify-content: space-between;
 }
 footer .footerNav__section {
@@ -252,10 +251,10 @@ footer .footerNav__section {
   gap: 8px;
 }
 footer .footerNav__section a {
+  width: fit-content;
   padding-left: 8px;
   color: #896723;
   text-decoration: none;
-  width: fit-content;
 }
 
 /*# sourceMappingURL=style.css.map */

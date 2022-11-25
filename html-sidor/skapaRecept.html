@@ -295,58 +295,6 @@
       </section>
       <div class="copyright">© Copyright</div>
     </footer>
-    <script>
-      //this sets the year and name of the copyright text in the bottom of the page.
-      const year = new Date().getFullYear();
-      $(".copyright").append(` ${year} Hemmaköket AB`);
-
-      //this links the added span message with the actual file input message
-      $(".imgInput__section__fileInput").change(function () {
-        const input = $(this);
-        const inputSection = input.parent();
-        const inputMsg = $(".imgInput__section__fileInput__msg", inputSection);
-        const fileName = input.val()?.replace(/^[A-z]:\\.*\\/, "");
-
-        inputMsg.text(fileName);
-      });
-
-      $("#addItem").click(function () {
-        const descriptionBox = $(this).parent().prev().children().last();
-        const descriptionList = $(this).parent().prev();
-        const addDescription = descriptionBox.clone();
-
-        descriptionList.append(addDescription);
-      });
-      $("#removeItem").click(function () {
-        const descriptionList = $(this).parent().prev().children();
-        const descriptionBox = $(this).parent().prev().children().last();
-
-        if (descriptionList.length > 1) {
-          descriptionBox.remove();
-        } else {
-          $(".removeItem__msg").fadeIn();
-          $(".removeItem__msg").text("Du måste ha minst 1 beskrivning");
-          setTimeout(function () {
-            $(".removeItem__msg").fadeOut();
-            $(".removeItem__msg").text("");
-          }, 3000);
-        }
-      });
-
-      $(".btnCreateRecipe__msg").hide();
-
-      $(".createRecipe__form").submit(function (event) {
-        event.preventDefault();
-        const form = $(this);
-        $(".btnCreateRecipe").fadeOut().hide();
-        $(".btnCreateRecipe__msg").fadeIn().show();
-
-        setTimeout(function () {
-          $(".btnCreateRecipe__msg").fadeOut("slow").hide();
-          $(".btnCreateRecipe").fadeIn().show();
-          form.trigger("reset");
-        }, 5000);
-      });
-    </script>
+    <script src="../script.js"></script>
   </body>
 </html>

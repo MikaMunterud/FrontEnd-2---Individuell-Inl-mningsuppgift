@@ -48,7 +48,7 @@
       </ul>
     </nav>
     <main>
-      <h2>Gong Bao Ji Ding</h2>
+      <h2>Grekisk paj</h2>
       <section class="recepie">
         <div class="recepie__frame overview">
           <div class="overview__1stLine">
@@ -56,9 +56,9 @@
             <div class="overview__1stline_date">2022-10-25</div>
           </div>
           <p>
-            Gong Bao Ji Ding är en populär kinesisk rätt som kommer från Sichuan
-            provinsen. I västvärlden är denna rätt mer känd som kungpao
-            kyckling. Men detta recept är mer Sichuan autentisk.
+            Denna vegetariska grekiska paj är perfekt både till den enkla
+            vardagen eller som tillbehör på buffébordet! Den är enkel att göra
+            men otroligt smakrik. Blir extra god med tsatziki till.
           </p>
           <a class="overview__showMore fullView" href="#descriptionFullView"
             >Visa recept ☞</a
@@ -78,22 +78,22 @@
           <div class="overview__imgBoxSmall">
             <img
               id="img1"
-              src="../img/chili-chicken1.jpeg"
+              src="../img/veggie-pie1.jpeg"
               alt="Första bilden på receptet"
             />
             <img
               id="img2"
-              src="../img/chili-chicken2.jpeg"
+              src="../img/veggie-pie2.jpeg"
               alt="Andra bilden på receptet"
             />
             <img
               id="img3"
-              src="../img/chili-chicken3.jpeg"
+              src="../img/veggie-pie3.jpeg"
               alt="Tredje bilden på receptet"
             />
             <img
               id="img4"
-              src="../img/chili-chicken4.jpeg"
+              src="../img/veggie-pie4.jpeg"
               alt="Fjärde bilden på receptet"
             />
           </div>
@@ -101,25 +101,25 @@
             <img
               class="wide-img"
               id="wide-img1"
-              src="../img/chili-chicken1.jpeg"
+              src="../img/veggie-pie1.jpeg"
               alt="Fjärde bilden på receptet"
             />
             <img
               class="wide-img"
               id="wide-img2"
-              src="../img/chili-chicken2.jpeg"
+              src="../img/veggie-pie2.jpeg"
               alt="Fjärde bilden på receptet"
             />
             <img
               class="wide-img"
               id="wide-img3"
-              src="../img/chili-chicken3.jpeg"
+              src="../img/veggie-pie3.jpeg"
               alt="Fjärde bilden på receptet"
             />
             <img
               class="wide-img"
               id="wide-img4"
-              src="../img/chili-chicken4.jpeg"
+              src="../img/veggie-pie4.jpeg"
               alt="Fjärde bilden på receptet"
             />
           </div>
@@ -347,66 +347,7 @@
       </section>
       <div class="copyright">© Copyright</div>
     </footer>
-    <script>
-      const year = new Date().getFullYear();
-      $(".copyright").append(` ${year} Hemmaköket AB`);
-
-      $("#wide-img1").show();
-
-      $("#img1").click(function () {
-        $(".wide-img").hide();
-        $("#wide-img1").show();
-      });
-
-      $("#img2").click(function () {
-        $(".wide-img").hide();
-        $("#wide-img2").show();
-      });
-
-      $("#img3").click(function () {
-        $(".wide-img").hide();
-        $("#wide-img3").show();
-      });
-
-      $("#img4").click(function () {
-        $(".wide-img").hide();
-        $("#wide-img4").show();
-      });
-
-      $(document).ready(function () {
-        const recipeFullRecipe = $(".recepie__frame.fullRecipe");
-        const showMoreFullView = $(".overview__showMore.fullView");
-        const showMoreSmallView = $(".overview__showMore.smallView");
-        const recepeIngredientsList = $(".fullRecipe__ingredients");
-        const recipeDescriptionList = $(".fullRecipe__description");
-        const recipeIngredientsBtn = $(".fullRecipe__nav__heading.ingredients");
-        const recipeDescriptionBtn = $(".fullRecipe__nav__heading.description");
-
-        recipeFullRecipe.hide();
-        recipeDescriptionList.hide();
-
-        showMoreFullView.click(function () {
-          if (showMoreFullView.text() === "Visa recept ☞") {
-            showMoreFullView.text("Dölj recept ☜");
-            recipeFullRecipe.show();
-          } else {
-            showMoreFullView.text("Visa recept ☞");
-            recipeFullRecipe.hide();
-          }
-        });
-        showMoreSmallView.click(function () {
-          recipeFullRecipe.show();
-        });
-
-        recipeIngredientsBtn.click(function () {
-          recipeDescriptionList.hide();
-          recepeIngredientsList.show();
-        });
-        recipeDescriptionBtn.click(function () {
-          recipeDescriptionList.show();
-          recepeIngredientsList.hide();
-        });
-      });
-    </script>
+    <script src="../script.js"></script>
+    <script src="recipescript.js"></script>
   </body>
 </html>

@@ -239,49 +239,14 @@
       </section>
       <div class="copyright">© Copyright</div>
     </footer>
-
+    <script src="../script.js"></script>
     <script>
-      const year = new Date().getFullYear();
-      $(".copyright").append(` ${year} Hemmaköket AB`);
 
-      const formMessage = $(".frameForm__contactForm__message");
-      formMessage.hide();
+      
 
-      $(".frameForm__contactForm__formInput").submit(function (event) {
-        event.preventDefault();
-        const inputName = $("#name").val();
-        const inputEmail = $("#email").val();
-        const inputMessage = $("#message").val();
-        const formLabels = $(".frameForm__contactForm__labels");
-        const formInputs = $(".frameForm__contactForm__formInput");
-        const form = $(this);
-        formLabels.fadeOut("slow").hide();
-        form.fadeOut("slow").hide();
+     
 
-        formMessage.fadeIn().show();
-        setTimeout(function () {
-          formMessage.fadeOut().hide();
-          formLabels.fadeIn("slow");
-          formInputs.fadeIn("slow");
-          form.trigger("reset");
-        }, 6000);
-      });
-
-      $(document).ready(function () {
-        $(".contactInfo").hide();
-
-        $(".contactButton").click(function () {
-          const btnChoice = $(this).val();
-
-          if (btnChoice === "Visa kontaktinfo") {
-            $(this).val("Dölj kontaktinfo");
-          } else {
-            $(this).val("Visa kontaktinfo");
-          }
-
-          $(this).siblings(".contactInfo").toggle();
-        });
-      });
+     
     </script>
   </body>
 </html>

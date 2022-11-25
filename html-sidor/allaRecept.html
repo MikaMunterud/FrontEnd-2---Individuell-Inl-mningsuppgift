@@ -163,7 +163,7 @@
                 </p>
               </div>
               <p>
-                <a href="../html-recept/recept1.html">Gå till receptet</a>
+                <a href="../html-recept/GongBaoJiDing.html">Gå till receptet</a>
               </p>
             </div>
           </div>
@@ -211,7 +211,7 @@
                 </p>
               </div>
               <p>
-                <a href="../html-recept/recept1.html">Gå till receptet</a>
+                <a href="../html-recept/greekPie.html">Gå till receptet</a>
               </p>
             </div>
           </div>
@@ -664,40 +664,6 @@
       </section>
       <div class="copyright">© Copyright</div>
     </footer>
-    <script>
-      const year = new Date().getFullYear();
-      $(".copyright").append(` ${year} Hemmaköket AB`);
-
-      $(document).ready(function () {
-        $(".filterBar__filters").hide();
-
-        $(".filterBar__headding").click(function () {
-          const filterBar = $(".filterBar__filters");
-          const filterHeadding = $(".filterBar__headding").text();
-
-          if (filterHeadding === "Visa filter") {
-            $(this).text("Dölj filter");
-            $(filterBar).show();
-          } else {
-            $(this).text("Visa filter");
-            $(filterBar).hide();
-          }
-        });
-
-        $(".shortInfo").hide();
-
-        $(".btnMoreInfo").click(function () {
-          const btnVal = $(this).val();
-
-          if (btnVal === "Mer info") {
-            $(this).val("Dölj info");
-          } else {
-            $(this).val("Mer info");
-          }
-
-          $(this).siblings(".shortInfo").toggle();
-        });
-      });
-    </script>
+    <script src="../script.js"></script>
   </body>
 </html>

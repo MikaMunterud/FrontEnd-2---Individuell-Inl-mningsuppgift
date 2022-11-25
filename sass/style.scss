@@ -1,33 +1,33 @@
 @import "variables";
+@import "mixin";
 
 html {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 body {
-  background-color: $light-color;
-  color: $gold-color;
-  margin: 0px;
   position: relative;
-  min-width: 650px;
-  font-size: 1.2rem;
-  max-width: 1800px;
   margin-inline: auto;
+  min-width: 650px;
+  max-width: 1800px;
+  margin: 0px;
   background-image: url("../img/marmor2.webp");
   background-size: cover;
   background-repeat: no-repeat;
-  
+  background-color: $light-color;
+  color: $gold-color;
+  font-size: 1.2rem;
 }
 h1 {
   display: flex;
-  border-radius: 25px;
   margin: 32px;
   padding: 16px;
   border: $borderFrame;
+  border-radius: 25px;
+  background-image: url("../img/marmor3.webp");
   font-size: 3rem;
   text-align: center;
   justify-content: space-around;
-  background-image: url("../img/marmor3.webp");
 }
 h2 {
   margin-bottom: 12px;
@@ -47,13 +47,13 @@ h4 {
 
 p {
   margin: 0;
+  line-height: 1.5em;
   text-align: justify;
 }
 
 .companyName {
   display: flex;
   flex-direction: column;
-  
 }
 
 .navBar {
@@ -63,17 +63,16 @@ p {
   flex-direction: row;
   background-color: $beige-color-0-8;
   backdrop-filter: blur(8px);
-  overflow: hidden;
   z-index: 3;
 
   &__opt {
     position: relative;
     display: flex;
-    list-style-type: none;
     flex-wrap: nowrap;
     width: 100%;
     margin: 0px;
     padding: 0px;
+    list-style-type: none;
     justify-content: space-around;
 
     &__list {
@@ -86,9 +85,9 @@ p {
         padding: 24px 0px;
         color: $light-color;
         font-size: 1.6rem;
-        text-decoration: none;
         font-weight: bold;
-        @media (max-width: 700px) {
+        text-decoration: none;
+        @media (max-width: $media-XS) {
           font-size: 1.5rem;
         }
       }
@@ -128,9 +127,9 @@ main {
   }
 
   &__img {
-    border-radius: 12px;
-    width: 100%;
     object-fit: cover;
+    width: 100%;
+    border-radius: 12px;
   }
 }
 .recipeList {
@@ -151,8 +150,7 @@ main {
     margin: 0px 0px 32px 0px;
     padding: 32px;
     background-color: $beige-color-light-0-6;
-    // color: $dark-gold-color;
-    border: 5px double $gold-color;
+    border: $borderFrame;
     border-radius: 25px;
     text-align: start;
     @media (max-width: $media-M) {
@@ -165,7 +163,6 @@ main {
 
     &:hover {
       background-color: $beige-color-light-0-3;
-      backdrop-filter: blur(25px);
     }
 
     & .receptbeskrivning {
@@ -176,15 +173,15 @@ main {
     }
 
     & h3 {
-      text-align: start;
       margin: 16px 0px 8px 0px;
+      text-align: start;
       @media (max-width: $media-XS) {
         margin-top: 0px;
       }
     }
     & p {
-      font-size: 1rem;
       margin: 0px;
+      font-size: 1rem;
     }
     & .kategorier {
       display: flex;
@@ -194,17 +191,17 @@ main {
       gap: 8px;
     }
     & .btnMoreInfo {
-      color: inherit;
       width: fit-content;
-      font-weight: bold;
       margin: 4px 0px;
-      cursor: pointer;
+      padding: 0px;
       border: 0;
       background-color: inherit;
-      text-align: left;
+      color: inherit;
       font-family: inherit;
       font-size: 1.2rem;
-      padding: 0px;
+      font-weight: bold;
+      text-align: left;
+      cursor: pointer;
     }
 
     .shortInfo {
@@ -239,9 +236,8 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-self: end;
     width: calc(100% - 32px);
-
+    align-self: end;
     justify-content: space-between;
 
     &__section {
@@ -250,10 +246,10 @@ footer {
       margin: 0px 32px 0px 0px;
       gap: 8px;
       & a {
+        width: fit-content;
         padding-left: 8px;
         color: $gold-color;
         text-decoration: none;
-        width: fit-content;
       }
     }
   }

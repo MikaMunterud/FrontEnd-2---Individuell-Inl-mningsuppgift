@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixin";
 
 .createRecipe {
   display: flex;
@@ -7,21 +8,21 @@
   max-width: 1000px;
   margin-bottom: 32px;
   background-color: $beige-color-0-3;
-  border-radius: 25px;
   border: $borderFrame;
+  border-radius: 25px;
   justify-content: center;
   align-self: center;
-  @media (max-width: $media-L) {
-    width: 75%;
-  }
-  @media (max-width: $media-M) {
-    width: 80%;
+  @media (max-width: $media-XS) {
+    width: 90%;
   }
   @media (max-width: $media-S) {
     width: 85%;
   }
-  @media (max-width: $media-XS) {
-    width: 90%;
+  @media (max-width: $media-M) {
+    width: 80%;
+  }
+  @media (max-width: $media-L) {
+    width: 75%;
   }
 
   &__form {
@@ -79,7 +80,6 @@
       gap: 16px;
       &__item {
         padding-left: 8px;
-
         outline: 0px;
       }
       &__btns {
@@ -87,36 +87,30 @@
         flex-direction: row;
         gap: 16px;
         &__btn {
-          background-color: $light-color;
-          color: inherit;
           width: fit-content;
           padding: 6px 16px;
+          background-color: $light-color;
+          color: inherit;
+          font-family: inherit;
           font-size: 1rem;
           font-weight: bold;
-          font-family: inherit;
           border: 1px solid;
           border-radius: 10px;
           cursor: pointer;
-          &:hover {
-            opacity: 0.8;
-            box-shadow: 0 0 0 2px;
-            transition: 0.5s;
-          }
-          &:active {
-            transform: translate(0px, 1px);
-          }
+          @include btnEffect;
         }
       }
     }
   }
   .imgInput {
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 24px;
+    row-gap: 12px;
 
     &__section {
       display: flex;
       flex-wrap: nowrap;
-      width: calc(100% / 2 - 6px);
+      width: calc(100% / 2 - 12px);
       align-items: center;
       gap: 8px;
       @media (max-width: $media-XS) {
@@ -125,28 +119,21 @@
 
       &__fileInput {
         display: none;
-        &__label {
-          width: fit-content;
+        &__label {    
+          width: 75px;   
+          padding: 6px 12px;
           background-color: $light-color;
-          padding: 6px 16px;
           font-size: 0.9rem;
           font-weight: bold;
           border: 1px solid;
           border-radius: 10px;
+          text-align: center;
           cursor: pointer;
-          &:hover {
-            opacity: 0.8;
-            box-shadow: 0 0 0 2px;
-            transition: 0.5s;
-          }
-          &:active {
-            transform: translate(0px, 1px);
-          }
+          @include btnEffect;
         }
         &__msg {
-          width: fit-content;
+          width: calc(100% - 75px);
           font-size: 0.8rem;
-          margin-right: 32px;
         }
       }
     }
@@ -171,66 +158,52 @@
         margin-left: 8px;
       }
       &__options {
-        background-color: $light-color;
         padding: 6px 4px;
+        background-color: $light-color;
         color: $gold-color;
         font-size: 0.9rem;
         font-weight: bold;
-        border: 1px solid $gold-color;
+        border: 1px solid;
         border-radius: 8px;
-        justify-items: center;
         outline: none;
+        justify-items: center;
         cursor: pointer;
-        &:hover {
-          opacity: 0.8;
-          box-shadow: 0 0 0 2px;
-          transition: 0.5s;
-        }
+        @include btnEffect;
       }
     }
   }
 
   .formTextBox {
+    display: flex;
     width: calc(100% - 16px);
-    border: 0;
-    outline: 0;
     padding: 6px 8px;
     color: $gold-color;
-    display: flex;
-    font-weight: normal;
     font-size: 0.9rem;
-    resize: none;
+    font-weight: normal;
+    border: 0;
     border-radius: 6px;
+    outline: 0;
+    resize: none;
   }
 
   .removeItem__msg{
     font-size: 0.9rem;
     align-self: center;
-
   }
   .btnCreateRecipe {
- 
-    background-color: $light-color;
-    margin-top: 24px;
     width: 40%;
-    color: $gold-color;
-    border: 1px solid $gold-color;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    font-family: inherit;
-    align-self: center;
+    margin-top: 24px;
     padding: 8px 16px;
+    background-color: $light-color;
+    color: $gold-color;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid;
+    border-radius: 10px;
+    align-self: center;
     cursor: pointer;
-    &:hover {
-      opacity: 0.8;
-      box-shadow: 0 0 0 2px;
-      transition: 0.5s;
-    }
-    &:active {
-      transform: translate(0px, 1px);
-    }
-
+    @include btnEffect-active;
     &__msg {
       margin-top: 24px;
       padding: 9px 16px;

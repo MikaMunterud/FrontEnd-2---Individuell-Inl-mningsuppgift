@@ -1,11 +1,30 @@
 @mixin btnEffect {
-    :hover {
-      opacity: 0.8;
-      box-shadow: 0 0 0 2px;
-      transition: 0.5s;
-    }
-    :active {
-      transform: translate(0px, 1px);
-    }
+  &:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 0 2px;
+    transition: 0.5s;
   }
-  
+}
+
+@mixin btnEffect-active {
+  &:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 0 2px;
+    transition: 0.5s;
+  }
+  &:active {
+    transform: translate(0px, 1px);
+  }
+}
+
+@mixin hoverOpacity {
+  &:hover {
+    opacity: 0.7;
+  }
+}
+@mixin hoverOpacityScale {
+  @include hoverOpacity;
+  &:hover {
+    scale: 1.15;
+  }
+}

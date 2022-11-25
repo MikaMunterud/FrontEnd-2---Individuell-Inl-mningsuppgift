@@ -1,36 +1,40 @@
 @import "variables";
+@import "mixin";
 
 .homeSection {
-  margin-top: 32px;
   position: relative;
+  margin-top: 32px;
   text-align: center;
   z-index: 2;
 
   & .imgText {
     position: absolute;
-    align-self: center;
     top: 40%;
     left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.8rem;
+    width: 50%;
+    align-self: center;
+    transform: translate(-45%, -45%);
+    font-size: 1.5rem;
+    @media (min-width: $media-XS) {
+      font-size: 1.8rem;
+      transform: translate(-45%, -45%);
+    }
+    @media (min-width: $media-S) {
+      font-size: 2rem;
+      transform: translate(-45%, -42%);
+    }
+    @media (min-width: $media-M) {
+      width: 60%;
+      font-size: 2.1rem;
+      transform: translate(-43%, -10%);
+    }
+    @media (min-width: $media-L) {
+      font-size: 2.5rem;
+      transform: translateX(-43%);
+    }
+    @media (min-width: $media-XL) {
+      font-size: 2.8rem;
+      transform: translateX(-43%);
+    }
   }
-    // transform: translate(-50%, -50%);
-    // @media (min-width: 800px) {
-    //   font-size: 2rem;
-    //   transform: translate(-40%, -50%);
-    // }
-
-    // @media (min-width: 950px) {
-    //   font-size: 2.2rem;
-    //   transform: translate(-35%, -35%);
-    // }
-    // @media (min-width: 1300px) {
-    //   font-size: 2.5rem;
-    //   transform: translate(-35%, -25%);
-    // }
-    // @media (min-width: 1600px) {
-    //   font-size: 3rem;
-    //   transform: translate(-40%, -30%);
-    // }
-  
 }
