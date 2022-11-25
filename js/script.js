@@ -54,7 +54,7 @@ $(document).ready(function () {
     const ingredientBox = $(this).parent().prev().children().last();
     const ingredientList = $(this).parent().prev();
     const addIngredient = ingredientBox.clone();
-console.log()
+    console.log();
     ingredientList.append(addIngredient);
   });
 
@@ -78,10 +78,10 @@ console.log()
     }
   });
 
-    /*this will add another description box in the end of the list of
+  /*this will add another description box in the end of the list of
    *description boxes.
    */
-   $("#addItem").click(function () {
+  $("#addItem").click(function () {
     const descriptionBox = $(this).parent().prev().children().last();
     const descriptionList = $(this).parent().prev();
     const addDescription = descriptionBox.clone();
@@ -93,7 +93,7 @@ console.log()
    *description boxes. The user cannot remove a description box if there
    *is only one left and then a message will appear.
    */
-   $("#removeItem").click(function () {
+  $("#removeItem").click(function () {
     const descriptionList = $(this).parent().prev().children();
     const descriptionBox = $(this).parent().prev().children().last();
 
@@ -108,6 +108,21 @@ console.log()
       }, 3000);
     }
   });
+
+  //this set the date value in the form to be "todays date"
+  const date = new Date();
+  const dd = date.getDate();
+  const mm = date.getMonth() + 1;
+  const yyyy = date.getFullYear();
+
+  if (dd < 10) {
+    dd = "0" + dd;
+  }
+  if (mm < 10) {
+    mm = "0" + mm;
+  }
+  const todaysDate = yyyy + "-" + mm + "-" + dd;
+  $("#date").val(todaysDate);
 
   /*this hides a message that that will be visible after a user has registered
    *a new recipe
