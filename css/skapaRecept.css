@@ -48,8 +48,8 @@
   outline: 0;
   border-radius: 6px;
   color: #896723;
-  font-size: 0.9rem;
   font-family: inherit;
+  font-size: 0.9rem;
 }
 .createRecipe__form__row {
   display: flex;
@@ -171,6 +171,7 @@
   padding: 6px 4px;
   background-color: #fefefe;
   color: #896723;
+  font-family: inherit;
   font-size: 0.9rem;
   font-weight: bold;
   border: 1px solid;
@@ -216,6 +217,7 @@
   width: 100%;
   margin-bottom: 8px;
   padding: 6px 8px;
+  font-family: inherit;
   font-weight: normal;
   border: 0;
   border-radius: 6px;
@@ -228,6 +230,7 @@
   text-align: center;
   margin-bottom: 8px;
   padding: 6px 8px;
+  font-family: inherit;
   font-weight: normal;
   border: 0;
   border-radius: 6px;
@@ -237,6 +240,7 @@
 .createRecipe .ingredientsList__ingredient .formInputIngredient__unit {
   width: fit-content;
   height: 28px;
+  font-family: inherit;
   font-size: inherit;
   color: #896723;
   border: 0;
@@ -248,6 +252,7 @@
   width: calc(100% - 16px);
   padding: 6px 8px;
   color: #896723;
+  font-family: inherit;
   font-size: 0.9rem;
   font-weight: normal;
   border: 0;
