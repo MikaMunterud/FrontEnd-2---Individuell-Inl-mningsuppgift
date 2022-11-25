@@ -2,26 +2,26 @@ $(document).ready(function () {
   /*this will show the first wide img and hide it if any other
    *image is chosen.
    */
-//   $("#wide-img1").show();
+  $("#wide-img1").show();
 
   $("#img1").click(function () {
-    $(".wide-img").hide("slow");
-    $("#wide-img1").fadeIn("slow");
+    $(".wide-img").hide();
+    $("#wide-img1").fadeIn().show();
   });
 
   $("#img2").click(function () {
-    $(".wide-img").hide("slow");
-    $("#wide-img2").fadeIn("slow");
+    $(".wide-img").hide();
+    $("#wide-img2").fadeIn().show();
   });
 
   $("#img3").click(function () {
-    $(".wide-img").hide("slow");
-    $("#wide-img3").fadeIn("slow");
+    $(".wide-img").hide();
+    $("#wide-img3").fadeIn().show();
   });
 
   $("#img4").click(function () {
-    $(".wide-img").hide("slow");
-    $("#wide-img4").fadeIn("slow");
+    $(".wide-img").hide();
+    $("#wide-img4").fadeIn().show();
   });
 
   /*This will hide/show the full recipe. The ingredients and description
@@ -53,11 +53,11 @@ $(document).ready(function () {
   });
 
   recipeIngredientsBtn.click(function () {
-    recipeDescriptionList.fadeOut("slow");
+    recipeDescriptionList.hide().fadeOut("slow");
     recepeIngredientsList.fadeIn("slow");
   });
   recipeDescriptionBtn.click(function () {
     recipeDescriptionList.fadeIn("slow");
-    recepeIngredientsList.fadeOut("slow");
+    recepeIngredientsList.hide().fadeOut("slow");
   });
 });
