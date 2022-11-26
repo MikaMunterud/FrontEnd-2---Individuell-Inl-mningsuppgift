@@ -56,7 +56,7 @@
   flex-direction: row;
   width: 100%;
   align-items: center;
-  gap: 32px;
+  gap: 16px;
 }
 .createRecipe__form__row__section {
   display: flex;
@@ -89,6 +89,8 @@
 .createRecipe__form__description__btns {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
   gap: 16px;
 }
 .createRecipe__form__description__btns__btn {
@@ -210,12 +212,12 @@
   display: flex;
   width: 100%;
   font-size: 0.9rem;
+  align-items: center;
   gap: 8px;
 }
 .createRecipe .ingredientsList__ingredient .formInputIngredient__ingredient {
   display: flex;
   width: 100%;
-  margin-bottom: 8px;
   padding: 6px 8px;
   font-family: inherit;
   font-weight: normal;
@@ -227,8 +229,6 @@
 .createRecipe .ingredientsList__ingredient .formInputIngredient__qty {
   display: flex;
   width: 55px;
-  text-align: center;
-  margin-bottom: 8px;
   padding: 6px 8px;
   font-family: inherit;
   font-weight: normal;
@@ -237,15 +237,28 @@
   outline: 0;
   color: #896723;
 }
+.createRecipe .ingredientsList__ingredient .formInputIngredientinput::-webkit-outer-spin-button,
+.createRecipe .ingredientsList__ingredient .formInputIngredient input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.createRecipe .ingredientsList__ingredient .formInputIngredientinput[type=number] {
+  -moz-appearance: textfield;
+}
 .createRecipe .ingredientsList__ingredient .formInputIngredient__unit {
   width: fit-content;
   height: 28px;
+  padding: 6px 7px;
   font-family: inherit;
-  font-size: inherit;
   color: #896723;
   border: 0;
   border-radius: 6px;
   outline: 0;
+}
+.createRecipe .ingredientsList__ingredient .formInputIngredient__unit:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 0 2px;
+  transition: 0.5s;
 }
 .createRecipe .formTextBox {
   display: flex;

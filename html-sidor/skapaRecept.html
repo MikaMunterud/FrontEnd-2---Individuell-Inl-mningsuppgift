@@ -96,14 +96,14 @@
               <div class="formInputIngredient">
                 <input
                   class="formInputIngredient__ingredient"
-                  oninput="this.value = this.value.replace(/^([a-zA-Z]+\s)*[a-zA-Z]*$/, '')"
+                  maxlength="25"
                   placeholder="Ingrediens"
                   required
                 />
                 <input
                   class="formInputIngredient__qty"
-                  type="text"
-                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+                  type="number"
+                  min="0"
                   placeholder="Kvantitet"
                   required
                 />
@@ -127,14 +127,14 @@
               <div class="formInputIngredient">
                 <input
                   class="formInputIngredient__ingredient"
-                  oninput="this.value = this.value.replace(/^([a-zA-Z]+\s)*[a-zA-Z]*$/, '')"
+                  maxlength="25"
                   placeholder="Ingrediens"
                   required
                 />
                 <input
                   class="formInputIngredient__qty"
-                  type="text"
-                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+                  type="number"
+                  min="0"
                   placeholder="Kvantitet"
                   required
                 />
@@ -158,14 +158,14 @@
               <div class="formInputIngredient">
                 <input
                   class="formInputIngredient__ingredient"
-                  oninput="this.value = this.value.replace(/^([a-zA-Z]+\s)*[a-zA-Z]*$/, '')"
+                  maxlength="25"
                   placeholder="Ingrediens"
                   required
                 />
                 <input
                   class="formInputIngredient__qty"
-                  type="text"
-                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+                  type="number"
+                  min="0"
                   placeholder="Kvantitet"
                   required
                 />
@@ -189,14 +189,14 @@
               <div class="formInputIngredient">
                 <input
                   class="formInputIngredient__ingredient"
-                  oninput="this.value = this.value.replace(/^([a-zA-Z]+\s)*[a-zA-Z]*$/, '')"
+                  maxlength="25"
                   placeholder="Ingrediens"
                   required
                 />
                 <input
                   class="formInputIngredient__qty"
-                  type="text"
-                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+                  type="number"
+                  min="0"
                   placeholder="Kvantitet"
                   required
                 />
@@ -220,14 +220,14 @@
               <div class="formInputIngredient">
                 <input
                   class="formInputIngredient__ingredient"
-                  oninput="this.value = this.value.replace(/^([a-zA-Z]+\s)*[a-zA-Z]*$/, '')"
+                  maxlength="25"
                   placeholder="Ingrediens"
                   required
                 />
                 <input
                   class="formInputIngredient__qty"
-                  type="text"
-                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+                  type="number"
+                  min="0"
                   placeholder="Kvantitet"
                   required
                 />
@@ -251,14 +251,14 @@
               <div class="formInputIngredient">
                 <input
                   class="formInputIngredient__ingredient"
-                  oninput="this.value = this.value.replace(/^([a-zA-Z]+\s)*[a-zA-Z]*$/, '')"
+                  maxlength="25"
                   placeholder="Ingrediens"
                   required
                 />
                 <input
                   class="formInputIngredient__qty"
-                  type="text"
-                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+                  type="number"
+                  min="0"
                   placeholder="Kvantitet"
                   required
                 />
@@ -287,6 +287,7 @@
             >
               Lägg till ingrediens
             </button>
+
             <button
               class="createRecipe__form__description__btns__btn"
               id="removeIngredient"

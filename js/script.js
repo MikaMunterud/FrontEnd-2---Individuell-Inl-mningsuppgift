@@ -123,6 +123,7 @@ $(document).ready(function () {
   }
   const todaysDate = yyyy + "-" + mm + "-" + dd;
   $("#date").val(todaysDate);
+  $("#date").attr("max", todaysDate);
 
   /*this hides a message that that will be visible after a user has registered
    *a new recipe
